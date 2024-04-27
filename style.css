@@ -1,0 +1,384 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fefefe; 
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.triangle {
+    display : inline-block;
+ height : 0;
+ width : 0;
+ border-right : 8px solid transparent;
+ border-bottom : 14px solid gray;
+ border-left : 8px solid transparent;
+ position: relative;
+}
+
+.triangle:hover {
+    border-bottom-color: darkgray; /* Changement de couleur au survol */
+}
+
+.triangle.active {
+    border-bottom-color: black; /* Changement de couleur au clic */
+}
+
+.triangle.active:hover {
+   border-bottom-color: black; /* Maintient la couleur noire au survol */
+}
+
+.triangle.active:active {
+    transform: rotate(35deg); /* Rotation de 35 degrés au clic */
+    transition: transform 0.3s; /* Ajout d'une transition pour l'effet de rotation */
+}
+
+
+.triangle-1 {
+    top: 30px;
+    left: 10px;
+    transform: rotate(-20deg);
+}
+
+.triangle-2{
+    top: 9px;
+    left:25px;
+    transform: rotate(20deg);
+}
+
+.triangle-3{
+    top: 51px;
+    left:5px;
+    transform: rotate(-10deg);
+}
+
+.triangle-4{
+    top: 28px;
+    left:12px;
+    transform: rotate(90deg);
+}
+
+.triangle-5{
+    top: 76px;
+    left:-11px;
+    transform: rotate(-45deg);
+}
+
+
+#video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    height: 40%;
+    z-index: 0;
+}
+
+
+.controls-timeline-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls-container {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.timeline {
+    margin-left: 10px;
+    flex-grow: 1; /* La timeline prend autant d'espace disponible que possible */
+    height: 3px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.timeline-progress {
+    height: 100%;
+    background-color: #000;
+}
+
+.stop-button {
+    margin-left: 10px; /* Espacement entre la timeline et le bouton stop */
+    margin-right: 40px;
+}
+
+.playbutton{
+    margin-left: 64px;
+}
+
+.pausebutton{
+    margin-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.large-container{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+}
+
+.parole-text-container {
+  position: absolute;
+  bottom: 60px;
+  left: 425px;
+  width: 50%;
+  transform: translateX(-50%);
+  text-align: left;
+}
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background-color: black;
+    right: 0%;
+    top: 0%;
+}
+
+.panel{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0%;
+    top: 0%;
+}
+
+.close-button {
+    margin-left: 10px; /* Espacement entre la timeline et le bouton stop */
+    margin-right: 10px;
+    margin-top: 20px;
+    color: white;
+    width: 100px;
+    height: 100px;
+}
+
+.panel-title{
+    top: 10%;
+    mrgin-left: 5%;
+    font-family: "Courrier New" ;
+    font-weight: 400 ;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.panel-content{
+    top: 50%;
+    left: 0%;
+    font-family: "Courrier New" ;
+    font-weight: 400 ;
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+.title1 {
+    position: relative;
+    top: 22px;
+    left: 67px;
+    font-family: "Courier New" ;
+    font-weight: 400;
+
+    font-size: 49px; 
+    color: #4F4F4F;
+
+}
+
+.title2 {
+    position: relative;
+    top: -11px;
+    left: 70px;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 16px;
+    color: #4F4F4F;
+}
+
+.flexbox-1 {
+    position: absolute;
+    top: 29%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 110px;
+}
+
+.flexbox-2 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 25%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-3 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 52%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-4 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 60%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-5 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 70%;
+    left: 19%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-6 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-7 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 58%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-8 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 72%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-9 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-10 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 70%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-11 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 84%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-12 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 28%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-13 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-14 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 60%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-15 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-16 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 6%;
+    left: 82%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+.flexbox-17 {
+    /* Styles de positionnement pour la première flexbox */
+    position: absolute;
+    top: 43%;
+    left: 76%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
