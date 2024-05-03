@@ -321,4 +321,3 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.classList.add('hidden');
     });
 });
-
