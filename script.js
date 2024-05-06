@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
         overlay.classList.remove('hidden');
-        
+        overlay.classList.add('slide-in');
     });
 }
 }
