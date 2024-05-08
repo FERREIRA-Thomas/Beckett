@@ -120,11 +120,41 @@ body, html {
   animation: slideInFromRight 0.5s ease forwards;
 }
 
-.small {
-    width: 70%;
-    left: 5%;
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
+.slide-out {
+  animation: slideOutToRight 0.5s ease forwards;
+}
+
+.small {
+    animation: forwards;
+    width: 60%;
+    left: 30%;
+}
+
+@keyframes slideAnimation {
+    from {
+        right: 0;
+        width: 100%;
+        transform: translateX(0%);
+    }
+    to {
+        right: 30%;
+        width: 60%;
+        transform: translateX(-83%);
+    }
+}
+
+.slide-timeline {
+    animation: slideAnimation 0.5s ease forwards;
+}
 
 .timeline {
     margin-left: 10px;
@@ -171,6 +201,10 @@ body, html {
   width: 50%;
   transform: translateX(-50%);
   text-align: left;
+  font-family: "Courrier New" ;
+    font-weight: 400 ;
+    font-size: 14px;
+    color: black;
 }
 
 .overlay{
@@ -253,8 +287,63 @@ body, html {
     background-color: #606060; /* Couleur de fond gris plus foncée au survol */
 }
 
+.text-integral{
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    bottom: 7%;
+
+}
+
 .flexbox.small{
     left: 30%;
+}
+
+.overlay2{
+     position: absolute;
+    height: 100%;
+    width: 12%;
+    background: rgb(78,78,78);
+    background: linear-gradient(rgba(78,78,78,1) 0%, rgba(0,0,0,1) 100%);
+    left: 0%;
+    top: 0%;
+}
+
+.panel2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+}
+
+.close-button2 {
+    position: absolute;
+    margin-left: 10px; /* Espacement entre la timeline et le bouton stop */
+    margin-right: 10px;
+    margin-top: 20px;
+    color: white;
+    width: 100px;
+    height: 100px;
+}
+
+.panel-title2{
+    margin-top: 180%;
+    margin-left: 15%;
+    margin-right: 5%;
+    font-family: "Courrier New" ;
+    font-weight: 400 ;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.panel-summary2{
+    margin-left: 15%;
+    margin-right: 5%;
+    font-family: "Courrier New" ;
+    font-weight: 400 ;
+    font-size: 14px;
+    color: whitesmoke;
 }
 
 .title1 {
@@ -273,6 +362,17 @@ body, html {
     position: relative;
     top: -11px;
     left: 70px;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 19px;
+    color: #4F4F4F;
+}
+
+.credit{
+    position: relative;
+    top: -80px;
+    left: 78%;
+    cursor: pointer;
     font-family: "Courier New";
     font-weight: 400;
     font-size: 16px;
