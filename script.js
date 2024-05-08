@@ -298,11 +298,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('video').style.marginLeft = '-20%';
     document.querySelectorAll('.flexbox').forEach(flexbox => {
-        flexbox.style.marginLeft = '-20%';
+    flexbox.style.marginRight = '-30%';
     });
 
-        overlay.classList.remove('hidden');
-        overlay.classList.add('slide-in');
+        document.querySelector('.controls-container').classList.add('slide-timeline');
+
+        setTimeout(() => {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('slide-in');
+        }, 110);
     });
 }
 }
@@ -318,6 +322,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Ajouter un gestionnaire d'événement au bouton de fermeture du panneau
     closeButton.addEventListener('click', function() {
+        overlay.classList.remove('slide-in');
         overlay.classList.add('hidden');
+        document.querySelector('.controls-container').classList.remove('small');
+
+        document.getElementById('video').style.marginLeft = '0';
+    document.querySelectorAll('.flexbox').forEach(flexbox => {
+        flexbox.style.marginRight = '0';
+    });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const creditText = document.querySelector('.credit');
+    const closeButton2 = document.getElementById('closeButton2');
+    const panelTitle2 = document.getElementById('panelTitle2');
+    const panelSummary2 = document.getElementById('panelSummary2');
+
+    creditText.addEventListener('click', function() {
+        overlay2.classList.remove('hidden');
+    });
+});
+
+
+closeButton2.addEventListener('click', function() {
+        overlay2.classList.add('hidden');
+    });
