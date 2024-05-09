@@ -4,7 +4,10 @@ body, html {
     height: 100%;
     overflow: hidden;
     background-color: #fefefe; 
+    font-family: 'Courrier New';
+    font-weight: 400;
 }
+
 
 .container {
     display: flex;
@@ -17,6 +20,15 @@ body, html {
     border-right: 0%;
 }
 
+.blur{
+     filter: blur(4px)
+}
+
+.a {
+    text-decoration: none; /* Retire le soulignement par défaut */
+    color: inherit; /* Utilise la couleur par défaut du texte */
+    cursor: pointer; /* Change le curseur en main au survol */
+}
 
 .triangle {
     display : inline-block;
@@ -76,6 +88,113 @@ body, html {
     transform: rotate(-45deg);
 }
 
+.triangle-6{
+    transform: rotate(-28deg);
+}
+
+.triangle-7{
+    top: 0px;
+    left:0px;
+    transform: rotate(-7deg);
+}
+
+.triangle-8{
+    top: 3px;
+    left:11px;
+    transform: rotate(29deg);
+}
+
+.triangle-9{
+    top: 25px;
+    left:-25px;
+    transform: rotate(-90deg);
+}
+
+.triangle-10{
+    top: 12px;
+    left:0px;
+    transform: rotate(-8deg);
+}
+
+.triangle-11{
+    top: 0px;
+    left:0px;
+    transform: rotate(14deg);
+}
+
+.triangle-12{
+    top: 32px;
+    left:-28px;
+    transform: rotate(68deg);
+}
+
+.triangle-13{
+    top: 19px;
+    left:-23px;
+    transform: rotate(-43deg);
+}
+
+.triangle-14{
+    top: 4px;
+    left:29px;
+    transform: rotate(-6deg);
+}
+
+.triangle-15{
+    top: 17px;
+    left:-10px;
+    transform: rotate(-38deg);
+}
+
+.triangle-16{
+    top: 39px;
+    left:-22px;
+    transform: rotate(-48deg);
+}
+
+.triangle-17{
+    top: 24px;
+    left:-19px;
+    transform: rotate(5deg);
+}
+
+.triangle-18{
+    top: 0px;
+    left:0px;
+    transform: rotate(26deg);
+}
+
+.triangle-19{
+    top: 9px;
+    left:0px;
+    transform: rotate(-11deg);
+}
+
+.triangle-20{
+    top: 40px;
+    left:9px;
+    transform: rotate(-40deg);
+}
+
+.triangle-21{
+    top: 25px;
+    left:6px;
+    transform: rotate(-30deg);
+}
+
+.triangle-22{
+    top: 5px;
+    left:-2px;
+    transform: rotate(11deg);
+}
+
+.triangle-23{
+    top: 0px;
+    left:0px;
+    transform: rotate(-5deg);
+}
+
+
 
 #video {
     position: absolute;
@@ -99,12 +218,12 @@ body, html {
 .controls-container {
     position: absolute;
     bottom: 8%;
-    left: 50%;
+    left: 926px;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 90%;
 }
 
 @keyframes slideInFromRight {
@@ -141,12 +260,12 @@ body, html {
 
 @keyframes slideAnimation {
     from {
-        right: 0;
+        left: 28%;
         width: 100%;
         transform: translateX(0%);
     }
     to {
-        right: 30%;
+        left: 50%;
         width: 60%;
         transform: translateX(-83%);
     }
@@ -157,7 +276,7 @@ body, html {
 }
 
 .timeline {
-    margin-left: 10px;
+    margin-left: 20px;
     flex-grow: 1; /* La timeline prend autant d'espace disponible que possible */
     height: 3px;
     background-color: #fff;
@@ -170,16 +289,29 @@ body, html {
 }
 
 .stop-button {
-    margin-left: 10px; /* Espacement entre la timeline et le bouton stop */
+    margin-left: 20px; /* Espacement entre la timeline et le bouton stop */
     margin-right: 40px;
+    width: 20px;
 }
 
 .playbutton{
     margin-left: 64px;
+    width: 15px;
+}
+
+.playbutton.clicked {
+    content: url('play-button-inactive@2x.png');
+
 }
 
 .pausebutton{
     margin-left: 10px;
+    width: 15px;
+}
+
+
+.pausebutton.clicked {
+    content: url('button_pause_active@2x.png');
 }
 
 .hidden {
@@ -197,90 +329,94 @@ body, html {
 .parole-text-container {
   position: absolute;
   bottom: 13%;
-  left: 28%;
-  width: 50%;
+  left: 400px;
+  width: 400px;
   transform: translateX(-50%);
   text-align: left;
-  font-family: "Courrier New" ;
-    font-weight: 400 ;
-    font-size: 14px;
-    color: black;
+  font-family: 'Courrier New';
+  font-weight: 400;
+  font-size: 13px;
+  color: black;
 }
 
 .overlay{
     position: absolute;
     height: 100%;
-    width: 35%;
-    background: rgb(78,78,78);
-    background: linear-gradient(rgba(78,78,78,1) 0%, rgba(0,0,0,1) 100%);
+    width: 650px;
+    background: linear-gradient(rgba(78,78,78,1) 0%, rgba(0,0,0) 100%);
     right: 0%;
     top: 0%;
+    z-index: 1;
 }
 
 .panel{
     position: absolute;
     height: 100%;
-    width: 100%;
-    right: 0%;
+    width: 80%;
+    right: 10%;
     top: 0%;
+    font-family: 'Courrier New';
 }
 
 .close-button {
-    margin-left: 10px; /* Espacement entre la timeline et le bouton stop */
+    margin-left: 0px; /* Espacement entre la timeline et le bouton stop */
     margin-right: 10px;
-    margin-top: 20px;
+    margin-top: 55px;
     color: white;
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
 }
 
 .panel-title{
-    top: 10%;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-family: "Courrier New" ;
+    margin-top: 5%;
+    margin-bottom: 7%;
+    font-family: 'Courrier New' ;
+    letter-spacing: -1px;
+    line-height: 1em;
     font-weight: 400 ;
-    font-size: 30px;
+    font-size: 25px;
     color: whitesmoke;
 }
 
 .panel-authors{
-    margin-left: 5%;
-    font-family: "Courrier New" ;
+    margin-top: 10px;
+    margin-bottom: 7%;
+    font-family: 'Courrier New' ;
+    letter-spacing: -0.5px;
     font-weight: 400 ;
     font-size: 16px;
     color: whitesmoke;
 }
 
-.summarytitle{
-    margin-top: 10%;
-    margin-left: 5%;
-    margin-bottom: -1%;
-    font-family: "Courrier New" ;
+.panel-summarytitle{
+    margin-top: 20%;
+    margin-bottom: 0%;
+    font-family: 'Courrier New' ;
+    letter-spacing: -0.5px;
     font-weight: 400 ;
-    font-size: 18px;
+    font-size: 16px;
     color: whitesmoke;
 }
 
 .panel-summary{
-    margin-left: 5%;
-    margin-right: 5%;
-    font-family: "Courrier New" ;
+    margin-top: 5%;
+    font-family: 'Courrier New' ;
     font-weight: 400 ;
-    font-size: 14px;
+    font-size: 13px;
     color: whitesmoke;
 }
 
 #panelLink {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #808080; /* Couleur de fond gris */
+    background-color: #303030; /* Couleur de fond gris */
     color: #fff; /* Couleur du texte blanc */
     text-decoration: none; /* Supprimer le soulignement du lien */
-    border-radius: 4px; /* Ajouter des coins arrondis */
     transition: background-color 0.3s ease; /* Animation de transition */
-    margin-top: 50%;
-    margin-left: 38%;
+    margin-top: 0%;
+    margin-left: 180px;
+    align-items: center;
+    font-size: 13px;
 }
 
 #panelLink:hover {
@@ -302,11 +438,12 @@ body, html {
 .overlay2{
      position: absolute;
     height: 100%;
-    width: 12%;
+    width: 350px;
     background: rgb(78,78,78);
     background: linear-gradient(rgba(78,78,78,1) 0%, rgba(0,0,0,1) 100%);
     left: 0%;
-    top: 0%;
+    bottom: 0%;
+    z-index: 1;
 }
 
 .panel2{
@@ -314,36 +451,37 @@ body, html {
     height: 100%;
     width: 100%;
     left: 0%;
-    top: 0%;
+    bottom: 0%;
 }
 
 .close-button2 {
     position: absolute;
-    margin-left: 10px; /* Espacement entre la timeline et le bouton stop */
+    margin-left: 27px; /* Espacement entre la timeline et le bouton stop */
     margin-right: 10px;
-    margin-top: 20px;
+    margin-top: 380px;
     color: white;
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
 }
 
 .panel-title2{
-    margin-top: 180%;
-    margin-left: 15%;
+    margin-top: 165%;
+    margin-left: 12%;
     margin-right: 5%;
     font-family: "Courrier New" ;
     font-weight: 400 ;
-    font-size: 30px;
+    font-size: 26px;
     color: whitesmoke;
 }
 
 .panel-summary2{
-    margin-left: 15%;
+    margin-left: 12%;
     margin-right: 5%;
     font-family: "Courrier New" ;
     font-weight: 400 ;
-    font-size: 14px;
+    font-size: 13px;
     color: whitesmoke;
+    margin-bottom: 10%;
 }
 
 .title1 {
@@ -364,14 +502,14 @@ body, html {
     left: 70px;
     font-family: "Courier New";
     font-weight: 400;
-    font-size: 19px;
+    font-size: 16px;
     color: #4F4F4F;
 }
 
 .credit{
     position: relative;
     top: -80px;
-    left: 78%;
+    left: 92%;
     cursor: pointer;
     font-family: "Courier New";
     font-weight: 400;
@@ -381,8 +519,8 @@ body, html {
 
 .flexbox-1 {
     position: absolute;
-    top: 29%;
-    left: 25%;
+    top: 22%;
+    left: 18%;
     transform: translate(-50%, -50%);
     width: 130px;
     height: 110px;
@@ -391,68 +529,68 @@ body, html {
 .flexbox-2 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 25%;
+    top: 42%;
     left: 11%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
+    width: 17px;
+    height: 17px;
 }
 
 .flexbox-3 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 52%;
-    left: 9%;
+    top: 34%;
+    left: 7%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
+    width: 54px;
+    height: 50px;
 }
 
 .flexbox-4 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 60%;
-    left: 7%;
+    top: 56%;
+    left: 8%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
+    width: 69px;
+    height: 58px;
 }
 
 .flexbox-5 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 70%;
-    left: 19%;
+    top: 46%;
+    left: 34%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
+    width: 64px;
+    height: 64px;
 }
 
 .flexbox-6 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 40%;
-    left: 20%;
+    top: 35%;
+    left: 29%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
+    width: 44px;
+    height: 42px;
 }
 
 .flexbox-7 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 58%;
-    left: 22%;
+    top: 68%;
+    left: 40%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
+    width: 88px;
+    height: 70px;
 }
 
 .flexbox-8 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
     top: 72%;
-    left: 30%;
+    left: 75%;
     transform: translate(-50%, -50%);
     width: 150px;
     height: 90px;
@@ -461,8 +599,8 @@ body, html {
 .flexbox-9 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 13%;
-    left: 50%;
+    top: 32%;
+    left: 60%;
     transform: translate(-50%, -50%);
     width: 150px;
     height: 90px;
@@ -471,8 +609,8 @@ body, html {
 .flexbox-10 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 70%;
-    left: 56%;
+    top: 53%;
+    left: 62%;
     transform: translate(-50%, -50%);
     width: 150px;
     height: 90px;
@@ -481,8 +619,8 @@ body, html {
 .flexbox-11 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 84%;
-    left: 49%;
+    top: 45%;
+    left: 85%;
     transform: translate(-50%, -50%);
     width: 150px;
     height: 90px;
@@ -491,8 +629,8 @@ body, html {
 .flexbox-12 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 28%;
-    left: 60%;
+    top: 71%;
+    left: 55%;
     transform: translate(-50%, -50%);
     width: 150px;
     height: 90px;
@@ -501,8 +639,8 @@ body, html {
 .flexbox-13 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 50%;
-    left: 55%;
+    top: 57%;
+    left: 76%;
     transform: translate(-50%, -50%);
     width: 150px;
     height: 90px;
@@ -511,8 +649,8 @@ body, html {
 .flexbox-14 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 60%;
-    left: 51%;
+    top: 65%;
+    left: 20%;
     transform: translate(-50%, -50%);
     width: 150px;
     height: 90px;
@@ -521,8 +659,8 @@ body, html {
 .flexbox-15 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 67%;
-    left: 50%;
+    top: 78%;
+    left: 52%;
     transform: translate(-50%, -50%);
     width: 150px;
     height: 90px;
@@ -531,7 +669,7 @@ body, html {
 .flexbox-16 {
     /* Styles de positionnement pour la première flexbox */
     position: absolute;
-    top: 6%;
+    top: 26%;
     left: 82%;
     transform: translate(-50%, -50%);
     width: 150px;
