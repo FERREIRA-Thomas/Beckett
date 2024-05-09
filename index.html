@@ -9,6 +9,7 @@
 <body>
     <h1 class="title1">PAROLE EN ÉCLATS</h1>
     <h2 class="title2">Échos du n°12 « Paroles de danseur et de danseuse »<br>Revue Recherche en Danse</h2>
+    <h2 class="credit">Crédit</h2>
 
     <div class="container">
         <!-- Les flexbox seront ajoutées ici -->
@@ -17,16 +18,50 @@
 
     <div id="overlay" class="overlay hidden">
     <div class="panel">
-        <span id="closeButton" class="close-button">&times;</span>
+        <img id="closeButton" class="close-button" src= 'close-pannel@2x.png'></img>
         <h2 id="panelTitle" class="panel-title"></h2>
         <p id="panelAuthors" class="panel-authors"></p> <!-- Élément pour afficher les noms des auteurs -->
-        <hr> <!-- Ligne horizontale -->
-        <h3 class="summarytitle">Résumé</h3>
-        <hr>
+        <hr property: size 10px> <!-- Ligne horizontale -->
+        <p id= "panelsummaryTitle" class="panel-summarytitle">Résumé</p>
+        <hr property: size 10px>
         <p id="panelSummary" class="panel-summary"></p> <!-- Élément pour afficher le résumé -->
-        <a id="panelLink" class="panel-link" target="_blank">Voir le texte intégral ↗</a> <!-- Bouton pour le lien du texte intégral -->
+        <div id="texteIntegral" class="text-integral">
+        <a id="panelLink" class="panel-link" target="_blank">Texte intégral ↗</a> <!-- Bouton pour le lien du texte intégral -->
+        </div>
+    
     </div>
 </div>
+
+<div id="overlay2" class="overlay2 hidden">
+     <div class="panel">
+          <img id="closeButton2" class="close-button2" src= 'close-pannel@2x.png'></img>
+          <h2 id="panelTitle2" class="panel-title2">Crédits</h2>
+          <p id="panelSummary2" class="panel-summary2"> <strong>Responsables éditoriaux</strong> <br>
+            Giuseppe BURIGHEL <br>
+            Aurore DESPRES  <br>
+            Geisha FONTAINE  <br>
+            - <br>
+            <a target="_blank" href='https://journals.openedition.org/danse/' style="color: whitesmoke;">Revue de recherche en danse <br> </a>
+            - <br>
+            <strong>Conception graphique, <br> création vidéo et mixage <br> audio </strong> <br>
+            AYOUN David <br>
+            <strong> Programmation </strong> <br>
+            FERREIRA Thomas <br>
+            - <br>
+           <strong>Production </strong> <a target="_blank" href="https://www.chercheurs-en-danse.fr" style="color: whitesmoke";><br>
+            ASSOCIATION DES <br>
+            CHERCHEURS EN DANSE (aCD) <br> </a>
+            - <br>
+            <strong> Nous remercions les
+            auteurs du N°12 de la revue de recherche en danse pour l'ensemble 
+            de leurs contributions. <br>
+            - <br>
+            Vidéo extraite de <br>
+            <strong>"Not I" </strong> (1973) <br>
+            de Samuel Becket <br>
+        </p>
+     </div>
+ </div>
 
 
     <audio id="audio1" src="audio1.mp4"></audio>
@@ -89,12 +124,12 @@
 </div>
 </div>
      <div class="controls-container hidden">
-    <button id="playButton" class="control-button playbutton">▶</button>
-    <button id="pauseButton" class="control-button pausebutton">II</button>
+    <img id="playButton" class="control-button playbutton" src = 'play-button-active@2x.png'></img>
+    <img id="pauseButton" class="control-button pausebutton" src= 'button_pause_inactive@2x.png'></img>
     <div class="timeline hidden">
         <div class="timeline-progress"></div>
     </div>
-    <button id="stopButton" class="control-button stop-button">✖</button>
+    <img id="stopButton" class="control-button stop-button" src= 'close-timeline@2x.png'></img>
 </div>
 
     <script src="script.js"></script>
