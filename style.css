@@ -30,6 +30,192 @@ body, html {
     cursor: pointer; /* Change le curseur en main au survol */
 }
 
+/*Titre principal*/
+.main-title {
+    position: relative;
+    top: 22px;
+    left: 67px;
+    font-family: "Courier New" ;
+    font-weight: 400;
+
+    font-size: 49px; 
+    color: #4F4F4F;
+
+}
+/*Sous-titre*/
+.sub-title {
+    position: relative;
+    top: -11px;
+    left: 70px;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 16px;
+    color: #4F4F4F;
+}
+
+
+
+
+/* Placement et taille de la vidéo */
+#video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    height: 40%;
+    z-index: 0;
+}
+
+/* ? */
+.small{
+    left: 20%;
+}
+
+
+
+/* 17 Groupes de triangles */
+
+.flexbox-1 {
+    position: absolute;
+    top: 22%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 110px;
+}
+.flexbox-2 {
+    position: absolute;
+    top: 42%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    width: 17px;
+    height: 17px;
+}
+.flexbox-3 {
+    position: absolute;
+    top: 34%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    width: 54px;
+    height: 50px;
+}
+.flexbox-4 {
+    position: absolute;
+    top: 56%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+    width: 69px;
+    height: 58px;
+}
+.flexbox-5 {
+    position: absolute;
+    top: 46%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+}
+.flexbox-6 {
+    position: absolute;
+    top: 35%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 42px;
+}
+.flexbox-7 {
+    position: absolute;
+    top: 68%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 88px;
+    height: 70px;
+}
+.flexbox-8 {
+    position: absolute;
+    top: 72%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+.flexbox-9 {
+    position: absolute;
+    top: 32%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+.flexbox-10 {
+    position: absolute;
+    top: 53%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+.flexbox-11 {
+    position: absolute;
+    top: 45%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+.flexbox-12 {
+    position: absolute;
+    top: 71%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+.flexbox-13 {
+    position: absolute;
+    top: 57%;
+    left: 76%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+.flexbox-14 {
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+.flexbox-15 {
+    position: absolute;
+    top: 78%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+.flexbox-16 {
+    position: absolute;
+    top: 26%;
+    left: 82%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+.flexbox-17 {
+    position: absolute;
+    top: 43%;
+    left: 76%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}
+
+
+
+/* Réglages des TRIANGLES */
+
 .triangle {
     display : inline-block;
  height : 0;
@@ -43,151 +229,126 @@ body, html {
 .triangle:hover {
     border-bottom-color: darkgray; /* Changement de couleur au survol */
 }
-
 .triangle.active {
     border-bottom-color: black; /* Changement de couleur au clic */
 }
-
 .triangle.active:hover {
    border-bottom-color: black; /* Maintient la couleur noire au survol */
 }
-
 .triangle.active:active {
     transform: rotate(35deg); /* Rotation de 35 degrés au clic */
     transition: transform 0.3s; /* Ajout d'une transition pour l'effet de rotation */
 }
 
-
+/* ORIENTATION de chaque TRIANGLE */
 .triangle-1 {
     top: 30px;
     left: 10px;
     transform: rotate(-20deg);
 }
-
 .triangle-2{
     top: 9px;
     left:25px;
     transform: rotate(20deg);
 }
-
 .triangle-3{
     top: 51px;
     left:5px;
     transform: rotate(-10deg);
 }
-
 .triangle-4{
     top: 28px;
     left:12px;
     transform: rotate(90deg);
 }
-
 .triangle-5{
     top: 76px;
     left:-11px;
     transform: rotate(-45deg);
 }
-
 .triangle-6{
     transform: rotate(-28deg);
 }
-
 .triangle-7{
     top: 0px;
     left:0px;
     transform: rotate(-7deg);
 }
-
 .triangle-8{
     top: 3px;
     left:11px;
     transform: rotate(29deg);
 }
-
 .triangle-9{
     top: 25px;
     left:-25px;
     transform: rotate(-90deg);
 }
-
 .triangle-10{
     top: 12px;
     left:0px;
     transform: rotate(-8deg);
 }
-
 .triangle-11{
     top: 0px;
     left:0px;
     transform: rotate(14deg);
 }
-
 .triangle-12{
     top: 32px;
     left:-28px;
     transform: rotate(68deg);
 }
-
 .triangle-13{
     top: 19px;
     left:-23px;
     transform: rotate(-43deg);
 }
-
 .triangle-14{
     top: 4px;
     left:29px;
     transform: rotate(-6deg);
 }
-
 .triangle-15{
     top: 17px;
     left:-10px;
     transform: rotate(-38deg);
 }
-
 .triangle-16{
     top: 39px;
     left:-22px;
     transform: rotate(-48deg);
 }
-
 .triangle-17{
     top: 24px;
     left:-19px;
     transform: rotate(5deg);
 }
-
 .triangle-18{
     top: 0px;
     left:0px;
     transform: rotate(26deg);
 }
-
 .triangle-19{
     top: 9px;
     left:0px;
     transform: rotate(-11deg);
 }
-
 .triangle-20{
     top: 40px;
     left:9px;
     transform: rotate(-40deg);
 }
-
 .triangle-21{
     top: 25px;
     left:6px;
     transform: rotate(-30deg);
 }
-
 .triangle-22{
     top: 5px;
     left:-2px;
     transform: rotate(11deg);
 }
-
 .triangle-23{
     top: 0px;
     left:0px;
@@ -196,18 +357,7 @@ body, html {
 
 
 
-#video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    height: 40%;
-    z-index: 0;
-}
-
-.small{
-    left: 20%;
-}
+/* Réglages de la barre de lecture */
 
 .controls-timeline-container {
     display: flex;
@@ -215,6 +365,17 @@ body, html {
     justify-content: center;
 }
 
+/* Longueur et placement de la barre de lecture et de boutons */
+.controls-container {
+    position: absolute;
+    bottom: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+}
+
+/* LONG TIMELINE
 .controls-container {
     position: absolute;
     bottom: 8%;
@@ -224,7 +385,13 @@ body, html {
     align-items: center;
     justify-content: center;
     width: 90%;
-}
+}*/
+
+
+
+
+/* ANIMATION de mouvement timeine
+
 
 @keyframes slideInFromRight {
   0% {
@@ -275,6 +442,9 @@ body, html {
     animation: slideAnimation 0.5s ease forwards;
 }
 
+
+
+/* Barre de lecture */
 .timeline {
     margin-left: 20px;
     flex-grow: 1; /* La timeline prend autant d'espace disponible que possible */
@@ -282,41 +452,42 @@ body, html {
     background-color: #fff;
     border: 1px solid black;
 }
-
 .timeline-progress {
     height: 100%;
     background-color: #000;
 }
 
+
+/* Boutons de contrôle TIMELINE */
 .stop-button {
     margin-left: 20px; /* Espacement entre la timeline et le bouton stop */
     margin-right: 40px;
     width: 20px;
+    cursor:pointer;
 }
-
 .playbutton{
     margin-left: 64px;
     width: 15px;
+    cursor:pointer;
 }
-
 .playbutton.clicked {
     content: url('play-button-inactive@2x.png');
 
 }
-
 .pausebutton{
     margin-left: 10px;
     width: 15px;
+    cursor:pointer;
 }
-
-
 .pausebutton.clicked {
     content: url('button_pause_active@2x.png');
 }
-
 .hidden {
     display: none;
 }
+
+
+/* description audio*/
 
 .large-container{
     display: flex;
@@ -325,7 +496,19 @@ body, html {
     width: 100%;
     bottom: 15%;
 }
+.parole-text-container {
+    position: absolute;
+    bottom: 13%;
+    margin-left: 122px;
+    width: 400px;
+    text-align: left;
+    font-family: 'Courrier New';
+    font-weight: 400;
+    font-size: 13px;
+    color: black;
+  }
 
+/* ancien Texte de la parole 
 .parole-text-container {
   position: absolute;
   bottom: 13%;
@@ -337,10 +520,12 @@ body, html {
   font-weight: 400;
   font-size: 13px;
   color: black;
-}
+}*/
 
 
-/* Panneau droit */
+
+
+/* Panneau droit — Résumé articles référents */
 .overlay{
     position: absolute;
     height: 100%;
@@ -350,7 +535,6 @@ body, html {
     top: 0%;
     z-index: 1;
 }
-
 .panel{
     position: absolute;
     height: 100%;
@@ -359,7 +543,6 @@ body, html {
     top: 0%;
     font-family: 'Courrier New';
 }
-
 .close-button {
     margin-left: 0px; /* Espacement entre la timeline et le bouton stop */
     margin-right: 10px;
@@ -367,8 +550,8 @@ body, html {
     color: white;
     width: 40px;
     height: 40px;
+    cursor: pointer; 
 }
-
 .panel-title{
     margin-top: 5%;
     margin-bottom: 7%;
@@ -379,7 +562,6 @@ body, html {
     font-size: 25px;
     color: whitesmoke;
 }
-
 .panel-authors{
     margin-top: 10px;
     margin-bottom: 7%;
@@ -389,7 +571,6 @@ body, html {
     font-size: 16px;
     color: whitesmoke;
 }
-
 .panel-summarytitle{
     margin-top: 20%;
     margin-bottom: 0%;
@@ -399,7 +580,6 @@ body, html {
     font-size: 16px;
     color: whitesmoke;
 }
-
 .panel-summary{
     margin-top: 5%;
     font-family: 'Courrier New' ;
@@ -407,7 +587,6 @@ body, html {
     font-size: 13px;
     color: whitesmoke;
 }
-
 #panelLink {
     display: inline-block;
     padding: 8px 16px;
@@ -420,11 +599,9 @@ body, html {
     align-items: center;
     font-size: 13px;
 }
-
 #panelLink:hover {
     background-color: #606060; /* Couleur de fond gris plus foncée au survol */
 }
-
 .text-integral{
     position: absolute;
     width: 100%;
@@ -432,87 +609,14 @@ body, html {
     bottom: 7%;
 
 }
-
 .flexbox.small{
     left: 30%;
 }
 
 
-/* Panneau Crédits */
 
-.overlay-credits{
-     position: absolute;
-    height: 100%;
-    width: 350px;
-    background: rgb(78,78,78);
-    background: linear-gradient(rgba(78,78,78,1) 0%, rgba(0,0,0,1) 100%);
-    left: 0%;
-    bottom: 0%;
-    z-index: 1;
-}
 
-.panel-credits{
-    position: absolute;
-    height: 100%;
-    width: 80%;
-    right: 10%;
-    top: 0%;
-    font-family: 'Courrier New';
-}
-
-.close-button-credits {
-    position: absolute;
-    margin-left: 27px; /* Espacement entre la timeline et le bouton stop */
-    margin-right: 10px;
-    margin-top: 380px;
-    color: white;
-    width: 40px;
-    height: 40px;
-    cursor: pointer; 
-}
-
-.panel-title-credits{
-    margin-top: 165%;
-    margin-left: 12%;
-    margin-right: 5%;
-    font-family: "Courrier New" ;
-    font-weight: 400 ;
-    font-size: 26px;
-    color: whitesmoke;
-}
-
-.panel-summary-credits{
-    margin-left: 12%;
-    margin-right: 5%;
-    font-family: "Courrier New" ;
-    font-weight: 400 ;
-    font-size: 13px;
-    color: whitesmoke;
-    margin-bottom: 10%;
-}
-
-.title1 {
-    position: relative;
-    top: 22px;
-    left: 67px;
-    font-family: "Courier New" ;
-    font-weight: 400;
-
-    font-size: 49px; 
-    color: #4F4F4F;
-
-}
-
-.title2 {
-    position: relative;
-    top: -11px;
-    left: 70px;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 16px;
-    color: #4F4F4F;
-}
-
+/*Titre Crédits à gauche*/
 .credit{
     position: relative;
     top: -10px;
@@ -523,9 +627,10 @@ body, html {
     font-size: 16px;
     color: #4F4F4F;
 }
+/*
+Titre Crédits à Droite
 
-
-/*.credit{
+    .credit{
     position: relative;
     top: -80px;
     left: 92%;
@@ -536,171 +641,60 @@ body, html {
     color: #4F4F4F;
 }*/
 
-.flexbox-1 {
+/* ——————————— Panneau Crédits ——————————— */
+/* Panneau gris dégradé */
+.overlay-credits{
     position: absolute;
-    top: 22%;
-    left: 18%;
-    transform: translate(-50%, -50%);
-    width: 130px;
-    height: 110px;
+   height: 100%;
+   width: 350px;
+   background: rgb(78,78,78);
+   background: linear-gradient(rgba(78,78,78,1) 0%, rgba(0,0,0,1) 100%);
+   left: 0%;
+   bottom: 0%;
+   z-index: 1;
+}
+.panel-credits{
+   position: absolute;
+   height: 100%;
+   width: 80%;
+   right: 10%;
+   top: 0%;
+   font-family: 'Courrier New';
+}
+.close-button-credits {
+   position: absolute;
+   bottom: 650px;
+   left: 27px; /* Espacement entre la timeline et le bouton stop */
+   right: 10px;
+   color: white;
+   width: 40px;
+   height: 40px;
+   cursor: pointer; 
 }
 
-.flexbox-2 {
-    /* Styles de positionnement pour la première flexbox */
+.panel-title-credits{
     position: absolute;
-    top: 42%;
-    left: 11%;
-    transform: translate(-50%, -50%);
-    width: 17px;
-    height: 17px;
+    bottom: 530px;
+    left: 12%;
+    right: 5%;
+   font-family: "Courrier New" ;
+   font-weight: 400 ;
+   font-size: 26px;
+   color: whitesmoke;
 }
 
-.flexbox-3 {
-    /* Styles de positionnement pour la première flexbox */
+.panel-summary-credits{
     position: absolute;
-    top: 34%;
-    left: 7%;
-    transform: translate(-50%, -50%);
-    width: 54px;
-    height: 50px;
+    bottom: 100px;
+    left: 12%;
+    right: 5%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: whitesmoke;
 }
 
-.flexbox-4 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 56%;
-    left: 8%;
-    transform: translate(-50%, -50%);
-    width: 69px;
-    height: 58px;
-}
 
-.flexbox-5 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 46%;
-    left: 34%;
-    transform: translate(-50%, -50%);
-    width: 64px;
-    height: 64px;
-}
 
-.flexbox-6 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 35%;
-    left: 29%;
-    transform: translate(-50%, -50%);
-    width: 44px;
-    height: 42px;
-}
 
-.flexbox-7 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 68%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    width: 88px;
-    height: 70px;
-}
 
-.flexbox-8 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 72%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-
-.flexbox-9 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 32%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-
-.flexbox-10 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 53%;
-    left: 62%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-
-.flexbox-11 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 45%;
-    left: 85%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-
-.flexbox-12 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 71%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-
-.flexbox-13 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 57%;
-    left: 76%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-
-.flexbox-14 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 65%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-
-.flexbox-15 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 78%;
-    left: 52%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-
-.flexbox-16 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 26%;
-    left: 82%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-
-.flexbox-17 {
-    /* Styles de positionnement pour la première flexbox */
-    position: absolute;
-    top: 43%;
-    left: 76%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
