@@ -209,8 +209,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const panelLink = document.getElementById('panelLink'); // Nouveau élément pour le lien du texte intégral
     const closeButton = document.getElementById('closeButton');
     const panelSummaryTitle = document.getElementById('summarytitle');
-    const panelSummary2 = document.getElementById('panelSummary2');
-    const panelTitle2 = document.getElementById('panelTitle2');
+    const panelSummaryCredits = document.getElementById('panelSummaryCredits');
+    const panelTitleCredits = document.getElementById('panelTitleCredits');
 
     paroleTextContainer.style.fontFamily = "'Courier New', Courier, monospace";
     panelTitle.style.fontFamily = "'Courier New', Courier, monospace";
@@ -218,8 +218,8 @@ document.addEventListener('DOMContentLoaded', function() {
     panelSummary.style.fontFamily = "'Courier New', Courier, monospace";
     panelLink.style.fontFamily = "'Courier New', Courier, monospace";
     panelsummaryTitle.style.fontFamily = "'Courier New', Courier, monospace";
-     panelSummary2.style.fontFamily = "'Courier New', Courier, monospace";
-     panelTitle2.style.fontFamily = "'Courier New', Courier, monospace";
+    panelSummaryCredits.style.fontFamily = "'Courier New', Courier, monospace";
+     panelTitleCredits.style.fontFamily = "'Courier New', Courier, monospace";
 
 
 
@@ -730,7 +730,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         setTimeout(() => {
             overlay.classList.remove('hidden');
-             overlay2.classList.add('hidden');
+             overlayCredits.classList.add('hidden');
             overlay.classList.add('slide-in');
         }, 120);
     });
@@ -761,11 +761,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const creditText = document.querySelector('.credit');
-    const closeButton2 = document.getElementById('closeButton2');
-    const panelTitle2 = document.getElementById('panelTitle2');
-    const panelSummary2 = document.getElementById('panelSummary2');
+    const closeButtonCredits = document.getElementById('closeButtonCredits');
+    const panelTitleCredits = document.getElementById('panelTitleCredits');
+    const panelSummaryCredits = document.getElementById('panelSummaryCredits');
     const overlay1 = document.getElementById('overlay');
-    const overlay2 = document.getElementById('overlay2');
+    const overlayCredits = document.getElementById('overlayCredits');
     const triangles = document.querySelectorAll('.triangle');
     const title1 = document.querySelector('.title1'); // Correction du sélecteur
     const title2 = document.querySelector('.title2'); // Correction du sélecteur
@@ -776,7 +776,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     creditText.addEventListener('click', function() {
         overlay1.classList.add('hidden');
-        overlay2.classList.remove('hidden');
+        overlayCredits.classList.remove('hidden');
         paroleTextContainer.classList.add('blur');
         credit.classList.add('blur');
         controlsContainer.classList.add('blur');
@@ -791,8 +791,8 @@ document.addEventListener('DOMContentLoaded', function() {
         moveElementsLeft();
     });
 
-    closeButton2.addEventListener('click', function() {
-        overlay2.classList.add('hidden');
+    closeButtonCredits.addEventListener('click', function() {
+        overlayCredits.classList.add('hidden');
         paroleTextContainer.classList.remove('blur');
         controlsContainer.classList.remove('blur');
         credit.classList.remove('blur');

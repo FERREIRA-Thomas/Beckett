@@ -329,7 +329,7 @@ body, html {
 .parole-text-container {
   position: absolute;
   bottom: 13%;
-  left: 400px;
+  left: 200px;
   width: 400px;
   transform: translateX(-50%);
   text-align: left;
@@ -339,6 +339,8 @@ body, html {
   color: black;
 }
 
+
+/* Panneau droit */
 .overlay{
     position: absolute;
     height: 100%;
@@ -435,7 +437,7 @@ body, html {
     left: 30%;
 }
 
-.overlay2{
+.overlay-credits{
      position: absolute;
     height: 100%;
     width: 350px;
@@ -446,15 +448,16 @@ body, html {
     z-index: 1;
 }
 
-.panel2{
+.panel-credits{
     position: absolute;
     height: 100%;
-    width: 100%;
-    left: 0%;
-    bottom: 0%;
+    width: 80%;
+    right: 10%;
+    top: 0%;
+    font-family: 'Courrier New';
 }
 
-.close-button2 {
+.close-button-credits {
     position: absolute;
     margin-left: 27px; /* Espacement entre la timeline et le bouton stop */
     margin-right: 10px;
@@ -462,9 +465,10 @@ body, html {
     color: white;
     width: 40px;
     height: 40px;
+    cursor: pointer; 
 }
 
-.panel-title2{
+.panel-title-credits{
     margin-top: 165%;
     margin-left: 12%;
     margin-right: 5%;
@@ -474,7 +478,7 @@ body, html {
     color: whitesmoke;
 }
 
-.panel-summary2{
+.panel-summary-credits{
     margin-left: 12%;
     margin-right: 5%;
     font-family: "Courrier New" ;
