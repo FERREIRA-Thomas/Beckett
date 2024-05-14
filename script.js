@@ -770,8 +770,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlay1 = document.getElementById('overlay');
     const overlayCredits = document.getElementById('overlayCredits');
     const triangles = document.querySelectorAll('.triangle');
-    const title1 = document.querySelector('.title1'); // Correction du sélecteur
-    const title2 = document.querySelector('.title2'); // Correction du sélecteur
+    const mainTitle = document.querySelector('.main-title'); // Correction du sélecteur
+    const subTitle = document.querySelector('.sub-title'); // Correction du sélecteur
     const credit = document.querySelector('.credit'); // Correction du sélecteur
     const paroleTextContainer = document.querySelector('.parole-text-container'); // Correction du sélecteur
     const controlsContainer = document.querySelector('.controls-container');
@@ -807,8 +807,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function moveElementsLeft() {
-    title1.style.marginLeft = '360px';
-    title2.style.marginLeft = '360px';
+    mainTitle.style.marginLeft = '360px';
+    subTitle.style.marginLeft = '360px';
     controlsContainer.style.left = '1080px'; // Calcul de la position horizontale
     controlsContainer.style.width = '80%';
     paroleTextContainer.style.marginLeft = '240px';
@@ -816,8 +816,8 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 function resetElementMargins() {
-    title1.style.marginLeft = '0';
-    title2.style.marginLeft = '0';
+    mainTitle.style.marginLeft = '0';
+    subTitle.style.marginLeft = '0';
     controlsContainer.style.left = '926px';
     controlsContainer.style.width = '90%';
     paroleTextContainer.style.marginLeft = '0';
