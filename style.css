@@ -664,8 +664,8 @@ Titre Crédits à Droite
 .close-button-credits {
    position: absolute;
    bottom: 650px;
-   left: 27px; /* Espacement entre la timeline et le bouton stop */
-   right: 10px;
+   margin-left: 27px; /* Espacement entre la timeline et le bouton stop */
+   margin-right: 10px;
    color: white;
    width: 40px;
    height: 40px;
