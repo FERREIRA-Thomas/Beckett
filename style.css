@@ -509,13 +509,25 @@ body, html {
 .credit{
     position: relative;
     top: -80px;
-    left: 92%;
+    left: 70px;
     cursor: pointer;
     font-family: "Courier New";
     font-weight: 400;
     font-size: 16px;
     color: #4F4F4F;
 }
+
+
+/*.credit{
+    position: relative;
+    top: -80px;
+    left: 92%;
+    cursor: pointer;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 16px;
+    color: #4F4F4F;
+}*/
 
 .flexbox-1 {
     position: absolute;
