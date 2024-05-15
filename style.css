@@ -79,7 +79,7 @@ body, html {
     position: absolute;
     top: 22%;
     left: 18%;
-    transform: translate(-50%, -50%);
+  /*  transform: translate(-50%, -50%);*/
     width: 130px;
     height: 110px;
 }
@@ -213,7 +213,6 @@ body, html {
 }
 
 
-
 /* Réglages des TRIANGLES */
 
 .triangle {
@@ -221,13 +220,13 @@ body, html {
  height : 0;
  width : 0;
  border-right : 8px solid transparent;
- border-bottom : 14px solid gray;
+ border-bottom : 14px solid rgb(168, 168, 168);
  border-left : 8px solid transparent;
  position: relative;
 }
 
 .triangle:hover {
-    border-bottom-color: darkgray; /* Changement de couleur au survol */
+    border-bottom-color: rgb(114, 114, 114); /* Changement de couleur au survol */
 }
 .triangle.active {
     border-bottom-color: black; /* Changement de couleur au clic */
@@ -238,121 +237,174 @@ body, html {
 .triangle.active:active {
     transform: rotate(35deg); /* Rotation de 35 degrés au clic */
     transition: transform 0.3s; /* Ajout d'une transition pour l'effet de rotation */
+    border-bottom-color: black;
 }
 
-/* ORIENTATION de chaque TRIANGLE */
+/* ——————————— ORIENTATION de chaque TRIANGLE ———————————————— */
+
+/* Caroline Granger et Anna Chirescu — Audio 1, 2, 3, 4, 5 */
 .triangle-1 {
     top: 30px;
     left: 10px;
     transform: rotate(-20deg);
+    cursor: pointer;
 }
 .triangle-2{
     top: 9px;
     left:25px;
     transform: rotate(20deg);
+    cursor: pointer;
 }
 .triangle-3{
     top: 51px;
     left:5px;
     transform: rotate(-10deg);
+    cursor: pointer;
 }
 .triangle-4{
     top: 28px;
     left:12px;
     transform: rotate(90deg);
+    cursor: pointer;
 }
 .triangle-5{
     top: 76px;
     left:-11px;
     transform: rotate(-45deg);
+    cursor: pointer;
 }
+
+/* Mariko Kitahara — Audio 6 */
 .triangle-6{
     transform: rotate(-28deg);
+    cursor: pointer;
 }
+
+
+/* Federica Fratagnoli — Audio 7, 8, 9 */
 .triangle-7{
     top: 0px;
     left:0px;
     transform: rotate(-7deg);
+    cursor: pointer;
 }
 .triangle-8{
     top: 3px;
     left:11px;
     transform: rotate(29deg);
+    cursor: pointer;
 }
 .triangle-9{
     top: 25px;
     left:-25px;
     transform: rotate(-90deg);
+    cursor: pointer;
 }
+
+
+/* Geisha Fontaine — Audio 10, 11, 12, 13 */
 .triangle-10{
     top: 12px;
     left:0px;
     transform: rotate(-8deg);
+    cursor: pointer;
 }
 .triangle-11{
     top: 0px;
     left:0px;
     transform: rotate(14deg);
+    cursor: pointer;
 }
 .triangle-12{
     top: 32px;
     left:-28px;
     transform: rotate(68deg);
+    cursor: pointer;
 }
 .triangle-13{
     top: 19px;
     left:-23px;
     transform: rotate(-43deg);
+    cursor: pointer;
 }
+
+
+
+/* Lulla Chourlin et Sarath Amarasingam — Audio 14, 15, 16, 17 */
 .triangle-14{
     top: 4px;
     left:29px;
     transform: rotate(-6deg);
+    cursor: pointer;
 }
 .triangle-15{
     top: 17px;
     left:-10px;
     transform: rotate(-38deg);
+    cursor: pointer;
 }
 .triangle-16{
     top: 39px;
     left:-22px;
     transform: rotate(-48deg);
+    cursor: pointer;
 }
 .triangle-17{
     top: 24px;
     left:-19px;
     transform: rotate(5deg);
+    cursor: pointer;
 }
+
+
+/* Marian del Valle, Antia Díaz Otero, Elisabeth Maesen et Barbara Manzetti — Audio 18,19 */
 .triangle-18{
     top: 0px;
     left:0px;
     transform: rotate(26deg);
+    cursor: pointer;
 }
 .triangle-19{
     top: 9px;
     left:0px;
     transform: rotate(-11deg);
+    cursor: pointer;
 }
+
+
+/* Marian del Valle, Antia Díaz Otero, Elisabeth Maesen et Barbara Manzetti — Audio 20, 21, 22, 23 */
 .triangle-20{
     top: 40px;
     left:9px;
     transform: rotate(-40deg);
+    cursor: pointer;
 }
 .triangle-21{
     top: 25px;
     left:6px;
     transform: rotate(-30deg);
+    cursor: pointer;
 }
 .triangle-22{
     top: 5px;
     left:-2px;
     transform: rotate(11deg);
+    cursor: pointer;
 }
 .triangle-23{
     top: 0px;
     left:0px;
     transform: rotate(-5deg);
+    cursor: pointer;
+}
+
+
+/* Thais Meirelles Parelli — Audio 20, 21, 22, 23 */
+.triangle-24{
+    top: -5px;
+    left:5px;
+    transform: rotate(-5deg);
+    cursor: pointer;
 }
 
 
