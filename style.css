@@ -357,7 +357,47 @@ body, html {
 
 
 
-/* Réglages de la barre de lecture */
+
+
+/* description audio*/
+
+.large-container{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    bottom: 15%;
+}
+.parole-text-container {
+    position: absolute;
+    bottom: 13%;
+    margin-left: 70px;
+    width: 400px;
+    text-align: left;
+    font-family: 'Courrier New';
+    font-weight: 400;
+    font-size: 13px;
+    color: black;
+  }
+
+/* ancien Texte de la parole 
+.parole-text-container {
+  position: absolute;
+  bottom: 13%;
+  left: 200px;
+  width: 400px;
+  transform: translateX(-50%);
+  text-align: left;
+  font-family: 'Courrier New';
+  font-weight: 400;
+  font-size: 13px;
+  color: black;
+}*/
+
+
+
+
+/* —————————————BARRE DE LECTURE ——————————— */
 
 .controls-timeline-container {
     display: flex;
@@ -368,11 +408,12 @@ body, html {
 /* Longueur et placement de la barre de lecture et de boutons */
 .controls-container {
     position: absolute;
+    left: 70px;
     bottom: 8%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 600px;
+    width: 300px;
 }
 
 /* LONG TIMELINE
@@ -386,8 +427,6 @@ body, html {
     justify-content: center;
     width: 90%;
 }*/
-
-
 
 
 /* ANIMATION de mouvement timeine
@@ -448,9 +487,9 @@ body, html {
 .timeline {
     margin-left: 20px;
     flex-grow: 1; /* La timeline prend autant d'espace disponible que possible */
-    height: 3px;
+    height: 2px;
     background-color: #fff;
-    border: 1px solid black;
+    border: 0.5px solid black;
 }
 .timeline-progress {
     height: 100%;
@@ -466,7 +505,6 @@ body, html {
     cursor:pointer;
 }
 .playbutton{
-    margin-left: 64px;
     width: 15px;
     cursor:pointer;
 }
@@ -487,40 +525,6 @@ body, html {
 }
 
 
-/* description audio*/
-
-.large-container{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    width: 100%;
-    bottom: 15%;
-}
-.parole-text-container {
-    position: absolute;
-    bottom: 13%;
-    margin-left: 122px;
-    width: 400px;
-    text-align: left;
-    font-family: 'Courrier New';
-    font-weight: 400;
-    font-size: 13px;
-    color: black;
-  }
-
-/* ancien Texte de la parole 
-.parole-text-container {
-  position: absolute;
-  bottom: 13%;
-  left: 200px;
-  width: 400px;
-  transform: translateX(-50%);
-  text-align: left;
-  font-family: 'Courrier New';
-  font-weight: 400;
-  font-size: 13px;
-  color: black;
-}*/
 
 
 
