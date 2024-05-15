@@ -780,8 +780,11 @@ document.addEventListener('DOMContentLoaded', function() {
     creditText.addEventListener('click', function() {
         overlay1.classList.add('hidden');
         overlayCredits.classList.remove('hidden');
+        mainTitle.classList.add('blur');
+        subTitle.classList.add('blur');
         paroleTextContainer.classList.add('blur');
         credit.classList.add('blur');
+        video.classList.add('blur');
         controlsContainer.classList.add('blur');
         audios.forEach(audio => {
         audio.pause();
@@ -798,7 +801,10 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayCredits.classList.add('hidden');
         paroleTextContainer.classList.remove('blur');
         controlsContainer.classList.remove('blur');
+        mainTitle.classList.remove('blur');
+        subTitle.classList.remove('blur');
         credit.classList.remove('blur');
+        video.classList.remove('blur');
         triangles.forEach(triangle => {
             triangle.classList.remove('blur');
         });
@@ -806,21 +812,24 @@ document.addEventListener('DOMContentLoaded', function() {
         resetElementMargins();
     });
 
+    // Panneaux crédits : déplacement des éléments sur la droite à l'ouverture du panneau
     function moveElementsLeft() {
     mainTitle.style.marginLeft = '360px';
     subTitle.style.marginLeft = '360px';
-    controlsContainer.style.left = '1080px'; // Calcul de la position horizontale
-    controlsContainer.style.width = '80%';
-    paroleTextContainer.style.marginLeft = '240px';
+    credit.style.marginLeft = '360px';
+    video.style.marginLeft = '360px';
+    controlsContainer.style.marginLeft = '360px'; 
+    paroleTextContainer.style.marginLeft = '430px';
     // Ajoutez d'autres éléments si nécessaire
 }
-
+// Panneaux crédits : rétabblissement de la position des éléments sur la droite à l'ouverture du panneau
 function resetElementMargins() {
     mainTitle.style.marginLeft = '0';
     subTitle.style.marginLeft = '0';
-    controlsContainer.style.left = '926px';
-    controlsContainer.style.width = '90%';
-    paroleTextContainer.style.marginLeft = '0';
+    credit.style.marginLeft = '0';
+    video.style.marginLeft = '0';
+    controlsContainer.style.marginLeft = '0';
+    paroleTextContainer.style.marginLeft = '70px';
     // Réinitialisez d'autres éléments si nécessaire
 }
 });

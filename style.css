@@ -498,12 +498,6 @@ body, html {
 
 
 /* Boutons de contrôle TIMELINE */
-.stop-button {
-    margin-left: 20px; /* Espacement entre la timeline et le bouton stop */
-    margin-right: 40px;
-    width: 20px;
-    cursor:pointer;
-}
 .playbutton{
     width: 15px;
     cursor:pointer;
@@ -511,6 +505,12 @@ body, html {
 .playbutton.clicked {
     content: url('play-button-inactive@2x.png');
 
+}
+.stop-button {
+    margin-left: 20px; /* Espacement entre la timeline et le bouton stop */
+    margin-right: 40px;
+    width: 20px;
+    cursor:pointer;
 }
 .pausebutton{
     margin-left: 10px;
