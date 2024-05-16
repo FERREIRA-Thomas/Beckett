@@ -42,11 +42,11 @@ body, html {
     left: 67px;
     font-family: "Courier New" ;
     font-weight: 400;
-    font-size: 49px; 
+    font-size: 40px; 
     color: #4F4F4F;
 }
 
-@media (max-width: 1400px) 
+@media (max-width: 1500px) 
 {
     .main-title {
         font-size: 30px; 
@@ -56,14 +56,14 @@ body, html {
     /*Sous-titre*/
 .sub-title {
     position: relative;
-    top: -11px;
+    top: -7px;
     left: 70px;
     font-family: "Courier New";
     font-weight: 400;
-    font-size: 16px;
+    font-size: 13px;
     color: #4F4F4F;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
     .sub-title {
         top: 0px;
         font-size: 10px; 
@@ -81,7 +81,7 @@ body, html {
     z-index: 0;
 }
 
-@media (max-width: 1400px) { 
+@media (max-width: 1500px) { 
     #video {
         height: 20%;
     }
@@ -246,7 +246,7 @@ body, html {
  position: relative;
 }
 
-@media (max-width: 1400px) 
+@media (max-width: 1500px) 
 {
     .triangle {
         border-right : 5px solid transparent;
@@ -648,7 +648,7 @@ body, html {
     color: black;
   }
 
-  @media (max-width: 1400px) 
+  @media (max-width: 1500px) 
 {
     .parole-text-container {
         font-size: 10px;
@@ -798,7 +798,7 @@ body, html {
 .hidden {
     display: none;
 }
-@media (max-width: 1400px) 
+@media (max-width: 1500px) 
 {
     .playbutton {
         width: 10px; 
@@ -887,14 +887,6 @@ body, html {
     color: whitesmoke;
 }
 
-@media (max-width: 1400px) 
-{
-    .panel-summary {
-        font-size: 10px; 
-    }
-
-}
-
 #panelLink {
     display: inline-block;
     padding: 8px 16px;
@@ -921,6 +913,40 @@ body, html {
     left: 30%;
 }
 
+@media (max-width: 1500px) 
+{
+    .overlay{  
+        width: 500px;
+    }
+    .close-button {
+        width: 30px;
+        height: 30px;
+    }
+    .panel-title{
+        font-size: 18px; 
+    }
+
+    .panel-authors{
+        font-size: 13px; 
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .panel-summarytitle{
+        font-size: 13px; 
+        margin-top: 7%;
+        margin-bottom: 0;
+    }
+    .panel-summary {
+        font-size: 10px; 
+    }
+    #panelLink {
+        padding: 6px 12px;
+        font-size: 10px;
+        margin-left: 150px;
+    }
+
+
+}
 
 
 
@@ -931,12 +957,12 @@ body, html {
     left: 70px;
     cursor: pointer;
     font-family: "Courier New";
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 13px;
     color: #4F4F4F;
 }
 
-@media (max-width: 1400px) 
+@media (max-width: 1500px) 
 {
     .credit {
         top: 0px;
@@ -1011,6 +1037,22 @@ Titre Crédits à Droite
     color: whitesmoke;
 }
 
+@media (max-width: 1500px) 
+{
+    .panel-summary-credits{
+        font-size: 10px;
+    }
+    .panel-title-credits{
+        font-size: 18px;
+        bottom: 400px;
+    }
+    .close-button-credits {
+        bottom: 470px;
+        width: 30px;
+        height: 30px;
+    }
+
+}
 
 
 
