@@ -37,12 +37,18 @@ body, html {
     left: 67px;
     font-family: "Courier New" ;
     font-weight: 400;
-
     font-size: 49px; 
     color: #4F4F4F;
-
 }
-/*Sous-titre*/
+
+@media (max-width: 1400px) 
+{
+    .main-title {
+        font-size: 30px; 
+    }
+}
+
+    /*Sous-titre*/
 .sub-title {
     position: relative;
     top: -11px;
@@ -52,8 +58,12 @@ body, html {
     font-size: 16px;
     color: #4F4F4F;
 }
-
-
+@media (max-width: 1400px) {
+    .sub-title {
+        top: 0px;
+        font-size: 10px; 
+    }
+}
 
 
 /* Placement et taille de la vidéo */
@@ -64,6 +74,12 @@ body, html {
     transform: translate(-50%, -50%); 
     height: 40%;
     z-index: 0;
+}
+
+@media (max-width: 1400px) { 
+    #video {
+        height: 20%;
+    }
 }
 
 /* ? */
@@ -224,6 +240,16 @@ body, html {
  border-left : 8px solid transparent;
  position: relative;
 }
+
+@media (max-width: 1400px) 
+{
+    .triangle {
+        border-right : 5px solid transparent;
+         border-bottom : 9px solid rgb(168, 168, 168);
+         border-left : 5px solid transparent;
+    }
+}
+
 
 .triangle:hover {
     border-bottom-color: rgb(114, 114, 114); /* Changement de couleur au survol */
@@ -617,6 +643,14 @@ body, html {
     color: black;
   }
 
+  @media (max-width: 1400px) 
+{
+    .parole-text-container {
+        font-size: 10px;
+        width: 300px;
+    }
+}
+
 /* ancien Texte de la parole 
 .parole-text-container {
   position: absolute;
@@ -741,11 +775,10 @@ body, html {
 }
 .playbutton.clicked {
     content: url('play-button-inactive@2x.png');
-
 }
+
 .stop-button {
     margin-left: 20px; /* Espacement entre la timeline et le bouton stop */
-    margin-right: 40px;
     width: 20px;
     cursor:pointer;
 }
@@ -760,7 +793,27 @@ body, html {
 .hidden {
     display: none;
 }
+@media (max-width: 1400px) 
+{
+    .playbutton {
+        width: 10px; 
+    }
+    .pausebutton{
+        width: 10px;
+        margin-left: 6px;
+    }
+    .stop-button {
+        width: 14px;
+        margin-left: 10px;
+    }
+    .timeline {
+        margin-left: 10px;
+    }
+    .controls-container {
+        width: 300px;
+    }
 
+}
 
 
 
@@ -828,6 +881,15 @@ body, html {
     font-size: 13px;
     color: whitesmoke;
 }
+
+@media (max-width: 1400px) 
+{
+    .panel-summary {
+        font-size: 10px; 
+    }
+
+}
+
 #panelLink {
     display: inline-block;
     padding: 8px 16px;
@@ -867,6 +929,15 @@ body, html {
     font-weight: 400;
     font-size: 16px;
     color: #4F4F4F;
+}
+
+@media (max-width: 1400px) 
+{
+    .credit {
+        top: 0px;
+        font-size: 10px; 
+        font-weight: bold;
+    }
 }
 /*
 Titre Crédits à Droite
