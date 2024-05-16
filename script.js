@@ -218,6 +218,8 @@ document.addEventListener('DOMContentLoaded', function() {
     enableFlexboxHover();
 });
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const triangles = document.querySelectorAll('.triangle');
     const flexboxes = document.querySelectorAll('.flexbox');
