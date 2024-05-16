@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Mettre en pause la vidéo
                 const video = document.getElementById('video');
                 if (!video.paused) {
-                    video.pause();
+                    video.play();
                 }
 
                 // Ajouter du flou à toutes les flexbox sauf celle contenant le triangle cliqué
