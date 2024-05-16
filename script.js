@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.container');
     const totalTriangles = 51;
     const numFlexbox = 17;
+    const stopButton = document.getElementById('stopButton');
 
     // Créer les triangles et les ajouter à la page
     const triangles = [];
@@ -35,9 +36,62 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Mettre en pause la vidéo
                 const video = document.getElementById('video');
                 if (!video.paused) {
-                    video.play();
+                    video.pause();
                 }
+
+                // Ajouter du flou à toutes les flexbox sauf celle contenant le triangle cliqué
+                const clickedFlexbox = triangle.closest('.flexbox');
+                document.querySelectorAll('.flexbox').forEach(flexbox => {
+                    if (flexbox !== clickedFlexbox) {
+                        flexbox.classList.add('blur');
+                    }
+                });
+
+                // Désactiver tous les triangles sauf ceux de la flexbox cliquée
+                triangles.forEach(t => {
+                    if (!clickedFlexbox.contains(t)) {
+                        t.classList.add('disabled');
+                        t.style.pointerEvents = 'none'; // Empêche les clics sur les triangles désactivés
+                    } else {
+                        t.style.pointerEvents = ''; // Réactive les clics sur les triangles de la flexbox cliquée
+                    }
+                });
+
+                // Désactiver l'événement de survol des flexbox
+                disableFlexboxHover();
             }
+        });
+    }
+
+    // Fonction pour désactiver l'événement de survol des flexbox
+    function disableFlexboxHover() {
+        document.querySelectorAll('.flexbox').forEach(flexbox => {
+            flexbox.removeEventListener('mouseover', addBlur);
+            flexbox.removeEventListener('mouseout', removeBlur);
+        });
+    }
+
+    // Fonction pour réactiver l'événement de survol des flexbox
+    function enableFlexboxHover() {
+        document.querySelectorAll('.flexbox').forEach(flexbox => {
+            flexbox.addEventListener('mouseover', addBlur);
+            flexbox.addEventListener('mouseout', removeBlur);
+        });
+    }
+
+    // Fonction pour ajouter du flou
+    function addBlur(event) {
+        document.querySelectorAll('.flexbox').forEach(otherFlexbox => {
+            if (otherFlexbox !== event.currentTarget) {
+                otherFlexbox.style.filter = 'blur(5px)';
+            }
+        });
+    }
+
+    // Fonction pour retirer du flou
+    function removeBlur() {
+        document.querySelectorAll('.flexbox').forEach(flexbox => {
+            flexbox.style.filter = 'none';
         });
     }
 
@@ -57,21 +111,8 @@ document.addEventListener('DOMContentLoaded', function() {
         container.appendChild(flexbox);
 
         // Ajouter un événement de survol à la flexbox
-        flexbox.addEventListener('mouseover', function() {
-            // Appliquer un flou à toutes les autres flexbox
-            document.querySelectorAll('.flexbox').forEach(otherFlexbox => {
-                if (otherFlexbox !== flexbox) {
-                    otherFlexbox.style.filter = 'blur(5px)';
-                }
-            });
-        });
-
-        // Retirer le flou lorsque le curseur quitte la flexbox
-        flexbox.addEventListener('mouseout', function() {
-            document.querySelectorAll('.flexbox').forEach(otherFlexbox => {
-                otherFlexbox.style.filter = 'none';
-            });
-        });
+        flexbox.addEventListener('mouseover', addBlur);
+        flexbox.addEventListener('mouseout', removeBlur);
     }
 
     // Générer des flexbox avec un nombre de triangles spécifique pour chaque flexbox
@@ -87,80 +128,94 @@ document.addEventListener('DOMContentLoaded', function() {
             container.insertBefore(flexbox, container.children[position]);
         }
     }
-});
 
-// Fonction pour mettre à jour la progression de la timeline
-function updateTimeline(audio) {
-    const progress = (audio.currentTime / audio.duration) * 100;
-    timelineProgress.style.width = `${progress}%`;
-}
+    // Vérifier si stopButton est défini avant d'ajouter l'écouteur d'événement
+    if (stopButton) {
+        stopButton.addEventListener('click', function() {
+            const audios = document.querySelectorAll('audio');
+            const overlay = document.getElementById('overlay');
+            audios.forEach(audio => {
+                audio.pause(); // Mettre en pause tous les sons
+                audio.currentTime = 0; // Remettre la lecture au début
+                document.querySelector('.controls-container').classList.add('hidden');
+                document.querySelector('.timeline').classList.add('hidden');
+                document.querySelector('.parole-text-container').classList.add('hidden');
+                document.querySelector('.overlay').classList.add('hidden');
+                document.getElementById('video').style.marginLeft = '0%';
+                document.querySelector('.controls-container').classList.remove('slide-timeline');
+            });
+            const video = document.getElementById('video');
+            video.play(); // Reprendre la lecture de la vidéo
+            video.currentTime = 0; // Remettre la lecture de la vidéo au début
 
-// Mettre à jour la timeline lorsque la lecture audio progresse
-document.querySelectorAll('audio').forEach(audio => {
-    audio.addEventListener('timeupdate', () => {
-        updateTimeline(audio);
+            // Retirer le flou immédiatement
+            document.querySelectorAll('.flexbox').forEach(flexbox => {
+                flexbox.classList.remove('blur');
+                flexbox.style.filter = 'none'; // Enlève également le style de filtre
+            });
+
+            // Réactiver tous les triangles
+            triangles.forEach(triangle => {
+                triangle.classList.remove('disabled');
+                triangle.style.pointerEvents = ''; // Réactiver les clics sur les triangles
+            });
+
+            // Réactiver l'événement de survol des flexbox
+            enableFlexboxHover();
+        });
+    }
+
+    // Mettre à jour la progression de la timeline lorsque la lecture audio progresse
+    document.querySelectorAll('audio').forEach(audio => {
+        audio.addEventListener('timeupdate', () => {
+            updateTimeline(audio);
+        });
     });
-});
 
-// Fonction pour mettre à jour la progression de la timeline
-function updateTimeline(audio) {
-    const progress = (audio.currentTime / audio.duration) * 100;
-    const timelineProgress = document.querySelector('.timeline-progress');
-    timelineProgress.style.width = `${progress}%`;
-}
+    // Fonction pour mettre à jour la progression de la timeline
+    function updateTimeline(audio) {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        const timelineProgress = document.querySelector('.timeline-progress');
+        timelineProgress.style.width = `${progress}%`;
+    }
 
-let pausedAudio = null; // Variable pour stocker le dernier son en pause
+    let pausedAudio = null; // Variable pour stocker le dernier son en pause
 
-document.getElementById('playButton').addEventListener('click', function() {
-    const audios = document.querySelectorAll('audio');
-    let isPlaying = false;
-    audios.forEach(audio => {
-        if (audio.paused && audio === pausedAudio) {
-            audio.play(); // Reprendre la lecture du dernier son en pause
-            pausedAudio = null; // Réinitialiser la variable pour indiquer qu'aucun son n'est en pause
-        } else if (!audio.paused) {
-            isPlaying = true; // Indiquer qu'au moins un son est en cours de lecture
+    document.getElementById('playButton').addEventListener('click', function() {
+        const audios = document.querySelectorAll('audio');
+        let isPlaying = false;
+        audios.forEach(audio => {
+            if (audio.paused && audio === pausedAudio) {
+                audio.play(); // Reprendre la lecture du dernier son en pause
+                pausedAudio = null; // Réinitialiser la variable pour indiquer qu'aucun son n'est en pause
+            } else if (!audio.paused) {
+                isPlaying = true; // Indiquer qu'au moins un son est en cours de lecture
+            }
+        });
+        const video = document.getElementById('video');
+        if (video.paused) {
+            video.play(); // Reprendre la lecture de la vidéo si elle est en pause
+        } else if (isPlaying) {
+            video.play(); // Reprendre la lecture de la vidéo s'il y a au moins un son en cours de lecture
         }
     });
-    const video = document.getElementById('video');
-    if (video.paused) {
-        video.play(); // Reprendre la lecture de la vidéo si elle est en pause
-    } else if (isPlaying) {
-        video.play(); // Reprendre la lecture de la vidéo s'il y a au moins un son en cours de lecture
-    }
-});
 
-document.getElementById('pauseButton').addEventListener('click', function() {
-    const audios = document.querySelectorAll('audio');
-    audios.forEach(audio => {
-        if (!audio.paused) {
-            audio.pause(); // Mettre en pause tous les sons
-            pausedAudio = audio; // Sauvegarder le dernier son en pause
+    document.getElementById('pauseButton').addEventListener('click', function() {
+        const audios = document.querySelectorAll('audio');
+        audios.forEach(audio => {
+            if (!audio.paused) {
+                audio.pause(); // Mettre en pause tous les sons
+                pausedAudio = audio; // Sauvegarder le dernier son en pause
+            }
+        });
+        const video = document.getElementById('video');
+        if (!video.paused) {
+            video.pause(); // Mettre en pause la vidéo si elle est en cours de lecture
         }
     });
-    const video = document.getElementById('video');
-    if (!video.paused) {
-        video.pause(); // Mettre en pause la vidéo si elle est en cours de lecture
-    }
-});
 
-document.getElementById('stopButton').addEventListener('click', function() {
-    const audios = document.querySelectorAll('audio');
-    const overlay = document.getElementById('overlay');
-    audios.forEach(audio => {
-        audio.pause(); // Mettre en pause tous les sons
-        audio.currentTime = 0; // Remettre la lecture au début
-        document.querySelector('.controls-container').classList.add('hidden');
-        document.querySelector('.timeline').classList.add('hidden');
-         document.querySelector('.parole-text-container').classList.add('hidden');
-         document.querySelector('.overlay').classList.add('hidden');
-         document.getElementById('video').style.marginLeft = '0%';
-         document.querySelector('.controls-container').classList.remove('slide-timeline');
-
-    });
-    const video = document.getElementById('video');
-    video.play(); // Mettre en pause la vidéo
-    video.currentTime; // Remettre la lecture de la vidéo au début
+    // Activer le survol des flexbox au chargement de la page
+    enableFlexboxHover();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
