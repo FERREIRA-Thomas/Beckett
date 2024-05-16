@@ -705,7 +705,7 @@ body, html {
 }*/
 
 
-/* ANIMATION de mouvement timeine
+/*ANIMATION d'ouverture des Pannel Résumés */
 
 
 @keyframes slideInFromRight {
@@ -752,11 +752,11 @@ body, html {
         transform: translateX(-83%);
     }
 }
-
+/*
 .slide-timeline {
     animation: slideAnimation 0.5s ease forwards;
 }
-
+*/
 
 
 /* Barre de lecture */
