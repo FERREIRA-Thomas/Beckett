@@ -68,32 +68,47 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.flexbox').forEach(flexbox => {
             flexbox.removeEventListener('mouseover', addBlur);
             flexbox.removeEventListener('mouseout', removeBlur);
+            flexbox.querySelectorAll('.triangle').forEach(triangle => {
+            triangle.classList.add('disabled');
         });
-    }
+    });
+}
+        
 
     // Fonction pour réactiver l'événement de survol des flexbox
     function enableFlexboxHover() {
         document.querySelectorAll('.flexbox').forEach(flexbox => {
             flexbox.addEventListener('mouseover', addBlur);
             flexbox.addEventListener('mouseout', removeBlur);
+            flexbox.querySelectorAll('.triangle').forEach(triangle => {
+            triangle.classList.remove('disabled');
         });
-    }
+    });
+}
+ 
 
     // Fonction pour ajouter du flou
     function addBlur(event) {
         document.querySelectorAll('.flexbox').forEach(otherFlexbox => {
             if (otherFlexbox !== event.currentTarget) {
                 otherFlexbox.style.filter = 'blur(5px)';
-            }
-        });
-    }
+                otherFlexbox.querySelectorAll('.triangle').forEach(triangle => {
+                triangle.classList.add('disabled');
+            });
+        };
+    });
+}
 
     // Fonction pour retirer du flou
     function removeBlur() {
         document.querySelectorAll('.flexbox').forEach(flexbox => {
             flexbox.style.filter = 'none';
+            flexbox.querySelectorAll('.triangle').forEach(triangle => {
+             triangle.classList.remove('disabled');
         });
-    }
+    });
+}
+      
 
     // Fonction pour créer une flexbox avec un nombre spécifique de triangles
     function createFlexbox(numTriangles, flexboxIndex) {
