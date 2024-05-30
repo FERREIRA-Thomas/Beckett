@@ -83,7 +83,7 @@ body, html {
 
 @media (max-width: 1500px) { 
     #video {
-        height: 20%;
+        height: 30%;
     }
 }
 
@@ -92,146 +92,6 @@ body, html {
     left: 20%;
 }
 
-
-
-/* 17 Groupes de triangles */
-
-.flexbox-1 {
-    position: absolute;
-    top: 22%;
-    left: 18%;
-  /*  transform: translate(-50%, -50%);*/
-    width: 130px;
-    height: 110px;
-}
-.flexbox-2 {
-    position: absolute;
-    top: 42%;
-    left: 11%;
-    transform: translate(-50%, -50%);
-    width: 17px;
-    height: 17px;
-}
-.flexbox-3 {
-    position: absolute;
-    top: 34%;
-    left: 7%;
-    transform: translate(-50%, -50%);
-    width: 54px;
-    height: 50px;
-}
-.flexbox-4 {
-    position: absolute;
-    top: 56%;
-    left: 8%;
-    transform: translate(-50%, -50%);
-    width: 69px;
-    height: 58px;
-}
-.flexbox-5 {
-    position: absolute;
-    top: 46%;
-    left: 34%;
-    transform: translate(-50%, -50%);
-    width: 64px;
-    height: 64px;
-}
-.flexbox-6 {
-    position: absolute;
-    top: 35%;
-    left: 29%;
-    transform: translate(-50%, -50%);
-    width: 44px;
-    height: 42px;
-}
-.flexbox-7 {
-    position: absolute;
-    top: 68%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    width: 88px;
-    height: 70px;
-}
-.flexbox-8 {
-    position: absolute;
-    top: 72%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-.flexbox-9 {
-    position: absolute;
-    top: 32%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-.flexbox-10 {
-    position: absolute;
-    top: 53%;
-    left: 62%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-.flexbox-11 {
-    position: absolute;
-    top: 45%;
-    left: 85%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-.flexbox-12 {
-    position: absolute;
-    top: 71%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-.flexbox-13 {
-    position: absolute;
-    top: 57%;
-    left: 76%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-.flexbox-14 {
-    position: absolute;
-    top: 65%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-.flexbox-15 {
-    position: absolute;
-    top: 78%;
-    left: 52%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-.flexbox-16 {
-    position: absolute;
-    top: 26%;
-    left: 82%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
-.flexbox-17 {
-    position: absolute;
-    top: 43%;
-    left: 76%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 90px;
-}
 
 
 /* Réglages des TRIANGLES */
@@ -249,9 +109,9 @@ body, html {
 @media (max-width: 1500px) 
 {
     .triangle {
-        border-right : 5px solid transparent;
-         border-bottom : 9px solid rgb(168, 168, 168);
-         border-left : 5px solid transparent;
+        border-right : 6px solid transparent;
+        border-bottom : 11px solid rgb(168, 168, 168);
+        border-left : 6px solid transparent;
     }
 }
 
@@ -271,41 +131,63 @@ body, html {
     border-bottom-color: black;
 }
 
+
+
+
+
 /* ——————————— ORIENTATION de chaque TRIANGLE ———————————————— */
 
 /* Caroline Granger et Anna Chirescu — Audio 1, 2, 3, 4, 5 */
-.triangle-1 {
+
+.flexbox-1 {
+    position: absolute;
+    top: 30%;
+    left: 18%;
+  /*  transform: translate(-50%, -50%);*/
+    width: 130px;
+    height: 110px;
+    }
+
+    .triangle-1 {
     top: 30px;
     left: 10px;
     transform: rotate(-20deg);
     cursor: pointer;
-}
-.triangle-2{
+    }
+    .triangle-2{
     top: 9px;
     left:25px;
     transform: rotate(20deg);
     cursor: pointer;
-}
-.triangle-3{
+    }
+    .triangle-3{
     top: 51px;
     left:5px;
     transform: rotate(-10deg);
     cursor: pointer;
-}
-.triangle-4{
+    }
+    .triangle-4{
     top: 28px;
     left:12px;
     transform: rotate(90deg);
     cursor: pointer;
-}
-.triangle-5{
+    }
+    .triangle-5{
     top: 76px;
     left:-11px;
     transform: rotate(-45deg);
     cursor: pointer;
-}
+    }
 
 /* Mariko Kitahara — Audio 6 */
+.flexbox-2 {
+    position: absolute;
+    top: 45%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    width: 17px;
+    height: 17px;
+}
 .triangle-6{
     transform: rotate(-28deg);
     cursor: pointer;
@@ -313,6 +195,15 @@ body, html {
 
 
 /* Federica Fratagnoli — Audio 7, 8, 9 */
+
+.flexbox-3 {
+    position: absolute;
+    top: 34%;
+    left: 100px;
+    transform: translate(-50%, -50%);
+    width: 54px;
+    height: 50px;
+}
 .triangle-7{
     top: 0px;
     left:0px;
@@ -333,11 +224,21 @@ body, html {
 }
 
 
-/* Geisha Fontaine — Audio 10, 11, 12, 13 */
+/*////////// Geisha Fontaine — Audio 10, 11, 12, 13 ////////////*/
+
+.flexbox-4 {
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 69px;
+    height: 58px;
+}
+
 .triangle-10{
     top: 12px;
-    left:0px;
-    transform: rotate(-8deg);
+    left:-10px;
+    transform: rotate(-15deg);
     cursor: pointer;
 }
 .triangle-11{
@@ -347,14 +248,14 @@ body, html {
     cursor: pointer;
 }
 .triangle-12{
-    top: 32px;
-    left:-28px;
-    transform: rotate(68deg);
+    top: 25px;
+    left:-20px;
+    transform: rotate(40deg);
     cursor: pointer;
 }
 .triangle-13{
     top: 19px;
-    left:-23px;
+    left:-15px;
     transform: rotate(-43deg);
     cursor: pointer;
 }
@@ -362,6 +263,15 @@ body, html {
 
 
 /* Lulla Chourlin et Sarath Amarasingam — Audio 14, 15, 16, 17 */
+.flexbox-5 {
+    position: absolute;
+    top: 46%;
+    left: 30%;
+    /*transform: translate(-50%, -50%);*/
+    width: 64px;
+    height: 64px;
+}
+
 .triangle-14{
     top: 4px;
     left:29px;
@@ -388,7 +298,16 @@ body, html {
 }
 
 
-/* Marian del Valle, Antia Díaz Otero, Elisabeth Maesen et Barbara Manzetti — Audio 18,19 */
+/*//////// Marian del Valle, Antia Díaz Otero, Elisabeth Maesen et Barbara Manzetti — Audio 18,19 ////*/
+.flexbox-6 {
+    position: absolute;
+    top: 32%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 42px;
+}
+
 .triangle-18{
     top: 0px;
     left:0px;
@@ -403,7 +322,16 @@ body, html {
 }
 
 
-/* Marian del Valle, Antia Díaz Otero, Elisabeth Maesen et Barbara Manzetti — Audio 20, 21, 22, 23 */
+/* Anatoli Vlassov — Audio 20, 21, 22, 23 */
+.flexbox-7 {
+    position: absolute;
+    top: 68%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 88px;
+    height: 70px;
+}
+
 .triangle-20{
     top: 40px;
     left:9px;
@@ -431,24 +359,42 @@ body, html {
 
 
 /* Thais Meirelles Parelli — Audio 20, 21, 22, 23 */
+.flexbox-8 {
+    position: absolute;
+    top: 42%;
+    right: 30%;
+   /* transform: translate(-50%, -50%);*/
+    width: 50px;
+    height: 50px;
+}
+
 .triangle-24{
     top: 0;
     left:0;
-    transform: rotate(-5deg);
+    transform: rotate(-35deg);
     cursor: pointer;
 }
 
 /* Eléa Lauret-Baussay — Audio 25, 26, 27, 28 */
+.flexbox-9 {
+    position: absolute;
+    top: 20%;
+    right: 38%;
+   /* transform: translate(-50%, -50%);*/
+    width: 70px;
+    height: 50px;
+}
+
 .triangle-25{
     top: 0;
     left:0;
-    transform: rotate(-5deg);
+    transform: rotate(-25deg);
     cursor: pointer;
 }
 .triangle-26{
     top: 20px;
     left: -7px;
-    transform: rotate(-5deg);
+    transform: rotate(-45deg);
     cursor: pointer;
 }
 .triangle-27{
@@ -460,169 +406,241 @@ body, html {
 .triangle-28{
     top: -5px;
     left: 0px;
-    transform: rotate(-5deg);
+    transform: rotate(-75deg);
     cursor: pointer;
 }
 
 
 /* Julia Wehren — Audio 29, 30 */
+.flexbox-10 {
+    position: absolute;
+    top: 30%;
+    right: 26%;
+   /* transform: translate(-50%, -50%);*/
+    width: 40px;
+    height: 40px;
+}
+
 .triangle-29{
-    top: -5px;
-    left:5px;
-    transform: rotate(-5deg);
+    top: 0px;
+    left: 0px;
+    transform: rotate(-45deg);
     cursor: pointer;
 }
 .triangle-30{
-    top: 5px;
+    top: 20px;
     left: -5px;
-    transform: rotate(-5deg);
+    transform: rotate(-15deg);
     cursor: pointer;
 }
 
 
 /* Maëlle Rousselot et Éléonore Guérineau — Audio 31, 32 */
+.flexbox-11 {
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    /*transform: translate(-50%, -50%);*/
+    width: 40px;
+    height: 40px;
+}
+
 .triangle-31{
-    top: -5px;
+    top: -15px;
     left:5px;
-    transform: rotate(-5deg);
+    transform: rotate(-30deg);
     cursor: pointer;
 }
 .triangle-32{
     top: 5px;
-    left: -5px;
-    transform: rotate(-5deg);
+    left: 10px;
+    transform: rotate(-45deg);
     cursor: pointer;
 }
 
 
 /* Fabienne Berger et Julia Wehren — Audio 33, 34, 35, 36 */
+.flexbox-12 {
+    position: absolute;
+    top: 60%;
+    right: 30%;
+    /*transform: translate(-50%, -50%);*/
+    width: 50px;
+    height: 50px;
+}
+
 .triangle-33{
-    top: -5px;
+    top: -25px;
     left:5px;
-    transform: rotate(-5deg);
+    transform: rotate(-35deg);
     cursor: pointer;
 }
 .triangle-34{
-    top: 5px;
+    top: 15px;
     left: -5px;
-    transform: rotate(-5deg);
+    transform: rotate(-55deg);
     cursor: pointer;
 }
 .triangle-35{
     top: 0px;
-    left: -5px;
-    transform: rotate(-5deg);
+    left: -35px;
+    transform: rotate(-75deg);
     cursor: pointer;
 }
 .triangle-36{
     top: -5px;
-    left: 0px;
+    left: -20px;
     transform: rotate(-5deg);
     cursor: pointer;
 }
 
 
 /* Alessandra Randazzo et David Zambrano — Audio 37, 38, 39, 40 */
+.flexbox-13 {
+    position: absolute;
+    top: 45%;
+    right: 20%;
+   /* transform: translate(-50%, -50%);*/
+    width: 50px;
+    height: 50px;
+}
+
 .triangle-37{
-    top: -5px;
-    left:5px;
+    top: -15px;
+    left: 5px;
     transform: rotate(-5deg);
     cursor: pointer;
 }
 .triangle-38{
-    top: 5px;
+    top: 25px;
     left: -5px;
-    transform: rotate(-5deg);
+    transform: rotate(-33deg);
     cursor: pointer;
 }
 .triangle-39{
-    top: 0px;
+    top: 7px;
     left: -5px;
-    transform: rotate(-5deg);
+    transform: rotate(-72deg);
     cursor: pointer;
 }
 .triangle-40{
     top: -5px;
     left: 0px;
-    transform: rotate(-5deg);
+    transform: rotate(-48deg);
     cursor: pointer;
 }
 
 
 /* TPauline Boivineau et Claire Rousier — Audio 41, 42, 43 */
+.flexbox-14 {
+    position: absolute;
+    top: 62%;
+    left: 15%;
+   /* transform: translate(-50%, -50%);*/
+    width: 150px;
+    height: 90px;
+}
+
 .triangle-41{
-    top: -5px;
-    left:5px;
-    transform: rotate(-5deg);
+    top: -10px;
+    left:10px;
+    transform: rotate(-33deg);
     cursor: pointer;
 }
 .triangle-42{
-    top: 5px;
-    left: -5px;
-    transform: rotate(-5deg);
+    top: 10px;
+    left: -0px;
+    transform: rotate(-52deg);
     cursor: pointer;
 }
 .triangle-43{
-    top: 0px;
-    left: -5px;
-    transform: rotate(-5deg);
+    top: 30px;
+    left: 0px;
+    transform: rotate(-85deg);
     cursor: pointer;
 }
 
 
 /* Camille Casale — Audio 44, 45, 46, 47 */
+.flexbox-15 {
+    position: absolute;
+    top: 78%;
+    right: 40%;
+    /*transform: translate(-50%, -50%);*/
+    width: 90px;
+    height: 50px;
+}
+
 .triangle-44{
-    top: -5px;
-    left:5px;
-    transform: rotate(-5deg);
+    top: -30px;
+    left:0px;
+    transform: rotate(-35deg);
     cursor: pointer;
 }
 .triangle-45{
-    top: 5px;
+    top: -10px;
     left: -5px;
-    transform: rotate(-5deg);
+    transform: rotate(-15deg);
     cursor: pointer;
 }
 .triangle-46{
     top: 0px;
-    left: -5px;
-    transform: rotate(-5deg);
+    left: 0px;
+    transform: rotate(-85deg);
     cursor: pointer;
 }
 .triangle-47{
-    top: -5px;
-    left: 0px;
-    transform: rotate(-5deg);
+    top: -7px;
+    left: 10px;
+    transform: rotate(-55deg);
     cursor: pointer;
 }
 
 
 /* Mathieu Bouvier— Audio 48, 49, 50, 51 */
+.flexbox-16 {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    /*transform: translate(-50%, -50%);*/
+    width: 50px;
+    height: 50px;
+}
+
 .triangle-48{
-    top: -5px;
+    top: -15px;
     left:5px;
     transform: rotate(-5deg);
     cursor: pointer;
 }
 .triangle-49{
     top: 5px;
-    left: -5px;
-    transform: rotate(-5deg);
+    left: -10px;
+    transform: rotate(-25deg);
     cursor: pointer;
 }
 .triangle-50{
     top: 0px;
-    left: -5px;
-    transform: rotate(-5deg);
+    left: 0px;
+    transform: rotate(-45deg);
     cursor: pointer;
 }
 .triangle-51{
-    top: -5px;
+    top: 15px;
     left: 0px;
-    transform: rotate(-5deg);
+    transform: rotate(-95deg);
     cursor: pointer;
 }
 
+/*
+.flexbox-17 {
+    position: absolute;
+    top: 43%;
+    left: 76%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 90px;
+}*/
 
 
 
@@ -654,7 +672,7 @@ body, html {
         font-size: 10px;
         width: 300px;
     }
-}
+}*/
 
 /* ancien Texte de la parole 
 .parole-text-container {
