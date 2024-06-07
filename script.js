@@ -798,7 +798,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('video').style.marginLeft = '-20%';
     document.querySelectorAll('.flexbox').forEach(flexbox => {
-    flexbox.style.marginRight = '-30%';
+    flexbox.style.marginRight = '0%';
     });
 
         document.querySelector('.controls-container').classList.add('slide-timeline');
