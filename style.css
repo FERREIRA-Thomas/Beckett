@@ -79,6 +79,10 @@ body, html {
     transform: translate(-50%, -50%); 
     height: 40%;
     z-index: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
 }
 
 @media (max-width: 1500px) { 
