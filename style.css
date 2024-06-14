@@ -29,7 +29,6 @@ body, html {
     opacity: 0.5; /* Réduit l'opacité pour indiquer visuellement que c'est désactivé */
 }
 
-
 .a {
     text-decoration: none; /* Retire le soulignement par défaut */
     color: inherit; /* Utilise la couleur par défaut du texte */
@@ -80,7 +79,6 @@ body, html {
     transform: translate(-50%, -50%); 
     height: 40%;
     z-index: 0;
-    border: 1px solid white;
 }
 
 @media (max-width: 1500px) { 
@@ -778,6 +776,33 @@ body, html {
 }
 */
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-credits {
+  animation: slideInFromLeft 0.5s ease forwards;
+}
+
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.slide-out-credits {
+  animation: slideOutToLeft 0.5s ease forwards;
+}
+
+
 
 /* Barre de lecture */
 .timeline {
@@ -990,7 +1015,6 @@ body, html {
         font-weight: bold;
     }
 }
-
 /*
 Titre Crédits à Droite
 
