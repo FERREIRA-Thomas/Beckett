@@ -80,6 +80,13 @@ body, html {
     transform: translate(-50%, -50%); 
     height: 40%;
     z-index: 0;
+    object-fit: cover; /* ou contain, selon vos besoins */
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    z-index: 0;
+    
 }
 
 @media (max-width: 1500px) { 
