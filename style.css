@@ -29,6 +29,7 @@ body, html {
     opacity: 0.5; /* Réduit l'opacité pour indiquer visuellement que c'est désactivé */
 }
 
+
 .a {
     text-decoration: none; /* Retire le soulignement par défaut */
     color: inherit; /* Utilise la couleur par défaut du texte */
