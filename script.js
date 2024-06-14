@@ -283,6 +283,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const panelSummaryTitle = document.getElementById('summarytitle');
     const panelSummaryCredits = document.getElementById('panelSummaryCredits');
     const panelTitleCredits = document.getElementById('panelTitleCredits');
+    const closeButtonCredits = document.getElementById('closeButtonCredits');
+    const overlayCredits = document.getElementById('overlayCredits');
 
     paroleTextContainer.style.fontFamily = "'Courier New', Courier, monospace";
     panelTitle.style.fontFamily = "'Courier New', Courier, monospace";
@@ -850,20 +852,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const audios = document.querySelectorAll('audio');
 
     creditText.addEventListener('click', function() {
+        overlay1.classList.remove('slide-in');
+        overlay1.classList.add('slide-out');
         overlay1.classList.add('hidden');
         overlayCredits.classList.remove('hidden');
         overlayCredits.classList.remove('slide-out-credits');
-         overlayCredits.classList.add('slide-in-credits')
+        overlayCredits.classList.add('slide-in-credits')
         mainTitle.classList.add('blur');
         subTitle.classList.add('blur');
-        paroleTextContainer.classList.add('blur');
+        paroleTextContainer.classList.add('hidden');
         credit.classList.add('blur');
         video.classList.add('blur');
-        controlsContainer.classList.add('blur');
+        controlsContainer.classList.add('hidden');
         audios.forEach(audio => {
         audio.pause();
         triangles.forEach(triangle => {
             triangle.classList.add('blur');
+            triangle.classList.add('disabled');
         });
         // Mettre en pause le son
         
@@ -874,6 +879,9 @@ document.addEventListener('DOMContentLoaded', function() {
     closeButtonCredits.addEventListener('click', function() {
         overlayCredits.classList.remove('slide-in-credits');
         overlayCredits.classList.add('slide-out-credits');
+        overlay1.classList.remove('slide-in');
+        overlay1.classList.remove('slide-out');
+        overlay1.classList.add('hidden');
         setTimeout(() => {
             overlayCredits.classList.add('hidden');
         }, 500); 
@@ -885,6 +893,7 @@ document.addEventListener('DOMContentLoaded', function() {
         video.classList.remove('blur');
         triangles.forEach(triangle => {
             triangle.classList.remove('blur');
+            triangle.classList.remove('disabled');
         });
         // Réinitialiser les marges lorsque l'overlay est fermé
         resetElementMargins();
