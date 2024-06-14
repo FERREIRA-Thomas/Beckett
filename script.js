@@ -839,17 +839,16 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const creditText = document.querySelector('.credit');
     const closeButtonCredits = document.getElementById('closeButtonCredits');
-    const panelTitleCredits = document.getElementById('panelTitleCredits');
-    const panelSummaryCredits = document.getElementById('panelSummaryCredits');
     const overlay1 = document.getElementById('overlay');
     const overlayCredits = document.getElementById('overlayCredits');
     const triangles = document.querySelectorAll('.triangle');
-    const mainTitle = document.querySelector('.main-title'); // Correction du sélecteur
-    const subTitle = document.querySelector('.sub-title'); // Correction du sélecteur
-    const credit = document.querySelector('.credit'); // Correction du sélecteur
-    const paroleTextContainer = document.querySelector('.parole-text-container'); // Correction du sélecteur
+    const mainTitle = document.querySelector('.main-title');
+    const subTitle = document.querySelector('.sub-title');
+    const credit = document.querySelector('.credit');
+    const paroleTextContainer = document.querySelector('.parole-text-container');
     const controlsContainer = document.querySelector('.controls-container');
     const audios = document.querySelectorAll('audio');
+    const clickBlocker = document.getElementById('clickBlocker');
 
     creditText.addEventListener('click', function() {
         overlay1.classList.remove('slide-in');
@@ -857,23 +856,24 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay1.classList.add('hidden');
         overlayCredits.classList.remove('hidden');
         overlayCredits.classList.remove('slide-out-credits');
-        overlayCredits.classList.add('slide-in-credits')
+        overlayCredits.classList.add('slide-in-credits');
         mainTitle.classList.add('blur');
         subTitle.classList.add('blur');
         paroleTextContainer.classList.add('hidden');
+        paroleTextContainer.classList.add('blur');
         credit.classList.add('blur');
         video.classList.add('blur');
         controlsContainer.classList.add('hidden');
+        controlsContainer.classList.add('blur');
+        clickBlocker.style.display = 'block'; // Montrer la couche transparente
         audios.forEach(audio => {
-        audio.pause();
+            audio.pause();
+        });
         triangles.forEach(triangle => {
             triangle.classList.add('blur');
             triangle.classList.add('disabled');
         });
-        // Mettre en pause le son
-        
-        // Déplacer les éléments vers la gauche lorsque l'overlay est ouvert
-        moveElementsLeft();
+        disableFlexboxHover();
     });
 
     closeButtonCredits.addEventListener('click', function() {
@@ -884,6 +884,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay1.classList.add('hidden');
         setTimeout(() => {
             overlayCredits.classList.add('hidden');
+            clickBlocker.style.display = 'none'; // Cacher la couche transparente
         }, 500); 
         paroleTextContainer.classList.remove('blur');
         controlsContainer.classList.remove('blur');
@@ -895,40 +896,47 @@ document.addEventListener('DOMContentLoaded', function() {
             triangle.classList.remove('blur');
             triangle.classList.remove('disabled');
         });
-        // Réinitialiser les marges lorsque l'overlay est fermé
         resetElementMargins();
+        enableFlexboxHover();
     });
 
-    // Panneaux crédits : déplacement des éléments sur la droite à l'ouverture du panneau
-    function moveElementsLeft() {
-    mainTitle.style.marginLeft = '360px';
-    subTitle.style.marginLeft = '360px';
-    credit.style.marginLeft = '360px';
-    video.style.marginLeft = '360px';
-    controlsContainer.style.marginLeft = '360px'; 
-    paroleTextContainer.style.marginLeft = '430px';
-    // Ajoutez d'autres éléments si nécessaire
-}
-// Panneaux crédits : rétabblissement de la position des éléments sur la droite à l'ouverture du panneau
-function resetElementMargins() {
-    mainTitle.style.marginLeft = '0';
-    subTitle.style.marginLeft = '0';
-    credit.style.marginLeft = '0';
-    video.style.marginLeft = '0';
-    controlsContainer.style.marginLeft = '0';
-    paroleTextContainer.style.marginLeft = '70px';
-    // Réinitialisez d'autres éléments si nécessaire
-}
-});
+    function disableFlexboxHover() {
+        document.querySelectorAll('.flexbox').forEach(flexbox => {
+            flexbox.removeEventListener('mouseover', addBlur);
+            flexbox.removeEventListener('mouseout', removeBlur);
+            flexbox.querySelectorAll('.triangle').forEach(triangle => {
+                triangle.classList.add('disabled');
+            });
+        });
+    }
 
+    function enableFlexboxHover() {
+        document.querySelectorAll('.flexbox').forEach(flexbox => {
+            flexbox.addEventListener('mouseover', addBlur);
+            flexbox.addEventListener('mouseout', removeBlur);
+            flexbox.querySelectorAll('.triangle').forEach(triangle => {
+                triangle.classList.remove('disabled');
+            });
+        });
+    }
 
-document.getElementById("pauseButton").addEventListener("click", function() {
-    this.classList.toggle("clicked");
-    playButton.classList.toggle("clicked")
-});
+    function addBlur(event) {
+        document.querySelectorAll('.flexbox').forEach(otherFlexbox => {
+            if (otherFlexbox !== event.currentTarget) {
+                otherFlexbox.style.filter = 'blur(5px)';
+                otherFlexbox.querySelectorAll('.triangle').forEach(triangle => {
+                    triangle.classList.add('disabled');
+                });
+            }
+        });
+    }
 
-document.getElementById("playButton").addEventListener("click", function() {
-    this.classList.toggle("clicked")
-    pauseButton.classList.toggle("clicked")
-});
+    function removeBlur() {
+        document.querySelectorAll('.flexbox').forEach(flexbox => {
+            flexbox.style.filter = 'none';
+            flexbox.querySelectorAll('.triangle').forEach(triangle => {
+                triangle.classList.remove('disabled');
+            });
+        });
+    }
 });
