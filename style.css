@@ -29,6 +29,18 @@ body, html {
     opacity: 0.5; /* Réduit l'opacité pour indiquer visuellement que c'est désactivé */
 }
 
+#clickBlocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Transparence */
+    z-index: 3; /* Au-dessus de tout */
+    display: none; /* Masqué par défaut */
+}
+
+
 .a {
     text-decoration: none; /* Retire le soulignement par défaut */
     color: inherit; /* Utilise la couleur par défaut du texte */
@@ -1039,7 +1051,7 @@ Titre Crédits à Droite
    background: linear-gradient(rgba(78,78,78,1) 0%, rgba(0,0,0,1) 100%);
    left: 0%;
    bottom: 0%;
-   z-index: 1;
+   z-index: 4;
 }
 .panel-credits{
    position: absolute;
@@ -1098,7 +1110,3 @@ Titre Crédits à Droite
     }
 
 }
-
-
-
-
