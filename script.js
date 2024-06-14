@@ -824,7 +824,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ajouter un gestionnaire d'événement au bouton de fermeture du panneau
     closeButton.addEventListener('click', function() {
         overlay.classList.remove('slide-in');
-        overlay.classList.add('hidden');
+        overlay.classList.add('slide-out');
         document.querySelector('.controls-container').classList.remove('slide-timeline');
 
         document.getElementById('video').style.marginLeft = '0%';
@@ -852,6 +852,8 @@ document.addEventListener('DOMContentLoaded', function() {
     creditText.addEventListener('click', function() {
         overlay1.classList.add('hidden');
         overlayCredits.classList.remove('hidden');
+        overlayCredits.classList.remove('slide-out-credits');
+         overlayCredits.classList.add('slide-in-credits')
         mainTitle.classList.add('blur');
         subTitle.classList.add('blur');
         paroleTextContainer.classList.add('blur');
@@ -870,7 +872,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     closeButtonCredits.addEventListener('click', function() {
-        overlayCredits.classList.add('hidden');
+        overlayCredits.classList.remove('slide-in-credits');
+        overlayCredits.classList.add('slide-out-credits');
+        setTimeout(() => {
+            overlayCredits.classList.add('hidden');
+        }, 500); 
         paroleTextContainer.classList.remove('blur');
         controlsContainer.classList.remove('blur');
         mainTitle.classList.remove('blur');
