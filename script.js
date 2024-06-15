@@ -798,12 +798,13 @@ document.addEventListener('DOMContentLoaded', function() {
         panelSummary.textContent = summary;
         panelLink.setAttribute('href', link);
 
-        document.getElementById('video').style.marginLeft = '-20%';
+        document.getElementById('video').style.marginLeft = '0';
     document.querySelectorAll('.flexbox').forEach(flexbox => {
-    flexbox.style.marginRight = '0%';
+    flexbox.style.marginRight = '0';
     });
 
         document.querySelector('.controls-container').classList.add('slide-timeline');
+        video.classList.add('blur');
 
         setTimeout(() => {
             overlay.classList.remove('slide-out');
@@ -829,6 +830,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.classList.remove('slide-in');
         overlay.classList.add('slide-out');
         document.querySelector('.controls-container').classList.remove('slide-timeline');
+        video.classList.remove('blur');
 
         document.getElementById('video').style.marginLeft = '0%';
     document.querySelectorAll('.flexbox').forEach(flexbox => {
