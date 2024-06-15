@@ -806,6 +806,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.controls-container').classList.add('slide-timeline');
 
         setTimeout(() => {
+            overlay.classList.remove('slide-out');
             overlay.classList.remove('hidden');
              overlayCredits.classList.add('hidden');
             overlay.classList.add('slide-in');
@@ -827,6 +828,7 @@ document.addEventListener('DOMContentLoaded', function() {
     closeButton.addEventListener('click', function() {
         overlay.classList.remove('slide-in');
         overlay.classList.add('slide-out');
+        overlay.classList.add('hidden');
         document.querySelector('.controls-container').classList.remove('slide-timeline');
 
         document.getElementById('video').style.marginLeft = '0%';
@@ -939,4 +941,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+});
+
+document.getElementById("pauseButton").addEventListener("click", function() {
+    this.classList.toggle("clicked");
+    playButton.classList.toggle("clicked")
+});
+
+document.getElementById("playButton").addEventListener("click", function() {
+    this.classList.toggle("clicked")
+    pauseButton.classList.toggle("clicked")
 });
