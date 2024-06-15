@@ -828,7 +828,6 @@ document.addEventListener('DOMContentLoaded', function() {
     closeButton.addEventListener('click', function() {
         overlay.classList.remove('slide-in');
         overlay.classList.add('slide-out');
-        overlay.classList.add('hidden');
         document.querySelector('.controls-container').classList.remove('slide-timeline');
 
         document.getElementById('video').style.marginLeft = '0%';
