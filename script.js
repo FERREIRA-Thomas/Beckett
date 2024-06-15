@@ -914,7 +914,6 @@ document.addEventListener('DOMContentLoaded', function() {
             triangle.classList.add('no-blur');
             triangle.classList.remove('disabled');
         });
-        resetElementMargins();
         enableFlexboxHover();
     });
 
