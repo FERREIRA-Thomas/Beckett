@@ -165,6 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Retirer le flou immédiatement
             document.querySelectorAll('.flexbox').forEach(flexbox => {
+                flexbox.classList.add('no-blur');
                 flexbox.classList.remove('blur');
                 flexbox.style.filter = 'none'; // Enlève également le style de filtre
             });
@@ -860,19 +861,26 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayCredits.classList.remove('hidden');
         overlayCredits.classList.remove('slide-out-credits');
         overlayCredits.classList.add('slide-in-credits');
+        mainTitle.classList.remove('no-blur');
         mainTitle.classList.add('blur');
+        subTitle.classList.remove('no-blur');
         subTitle.classList.add('blur');
         paroleTextContainer.classList.add('hidden');
+        paroleTextContainer.classList.remove('no-blur');
         paroleTextContainer.classList.add('blur');
+        credit.classList.remove('no-blur');
         credit.classList.add('blur');
+        video.classList.remove('no-blur');
         video.classList.add('blur');
         controlsContainer.classList.add('hidden');
+        controlsContainer.classList.remove('no-blur')
         controlsContainer.classList.add('blur');
         clickBlocker.style.display = 'block'; // Montrer la couche transparente
         audios.forEach(audio => {
             audio.pause();
         });
         triangles.forEach(triangle => {
+            triangle.classList.remove('no-blur');
             triangle.classList.add('blur');
             triangle.classList.add('disabled');
         });
@@ -890,13 +898,20 @@ document.addEventListener('DOMContentLoaded', function() {
             clickBlocker.style.display = 'none'; // Cacher la couche transparente
         }, 500); 
         paroleTextContainer.classList.remove('blur');
+        paroleTextContainer.classList.add('no-blur');
         controlsContainer.classList.remove('blur');
+        controlsContainer.classList.add('no-blur');
         mainTitle.classList.remove('blur');
+        mainTitle.classList.add('no-blur');
         subTitle.classList.remove('blur');
+        subTitle.classList.add('no-blur');
         credit.classList.remove('blur');
+        credit.classList.add('no-blur');
         video.classList.remove('blur');
+        video.classList.add('no-blur');
         triangles.forEach(triangle => {
             triangle.classList.remove('blur');
+            triangle.classList.add('no-blur');
             triangle.classList.remove('disabled');
         });
         resetElementMargins();
