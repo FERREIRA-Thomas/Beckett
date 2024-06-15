@@ -24,6 +24,11 @@ body, html {
      filter: blur(4px)
 }
 
+.no-blur {
+    filter: blur(0);
+    transition: filter 0.3s ease-out;
+}
+
 .disabled {
     pointer-events: none; /* Désactive les interactions */
     opacity: 0.5; /* Réduit l'opacité pour indiquer visuellement que c'est désactivé */
@@ -1110,3 +1115,7 @@ Titre Crédits à Droite
     }
 
 }
+
+
+
+
