@@ -884,7 +884,8 @@ document.addEventListener('DOMContentLoaded', function() {
             triangle.classList.add('blur');
             triangle.classList.add('disabled');
         });
-        disableFlexboxHover();
+        moveElementsLeft();
+
     });
 
     closeButtonCredits.addEventListener('click', function() {
@@ -914,28 +915,28 @@ document.addEventListener('DOMContentLoaded', function() {
             triangle.classList.add('no-blur');
             triangle.classList.remove('disabled');
         });
-        enableFlexboxHover();
+        resetElementMargins();
     });
 
-    function disableFlexboxHover() {
-        document.querySelectorAll('.flexbox').forEach(flexbox => {
-            flexbox.removeEventListener('mouseover', addBlur);
-            flexbox.removeEventListener('mouseout', removeBlur);
-            flexbox.querySelectorAll('.triangle').forEach(triangle => {
-                triangle.classList.add('disabled');
-            });
-        });
-    }
-
-    function enableFlexboxHover() {
-        document.querySelectorAll('.flexbox').forEach(flexbox => {
-            flexbox.addEventListener('mouseover', addBlur);
-            flexbox.addEventListener('mouseout', removeBlur);
-            flexbox.querySelectorAll('.triangle').forEach(triangle => {
-                triangle.classList.remove('disabled');
-            });
-        });
-    }
+       // Panneaux crédits : déplacement des éléments sur la droite à l'ouverture du panneau
+    function moveElementsLeft() {
+    mainTitle.style.marginLeft = '360px';
+    subTitle.style.marginLeft = '360px';
+    credit.style.marginLeft = '360px';
+    controlsContainer.style.marginLeft = '360px'; 
+    paroleTextContainer.style.marginLeft = '430px';
+    // Ajoutez d'autres éléments si nécessaire
+}
+// Panneaux crédits : rétabblissement de la position des éléments sur la droite à l'ouverture du panneau
+function resetElementMargins() {
+    mainTitle.style.marginLeft = '0';
+    subTitle.style.marginLeft = '0';
+    credit.style.marginLeft = '0';
+    video.style.marginLeft = '0';
+    controlsContainer.style.marginLeft = '0';
+    paroleTextContainer.style.marginLeft = '70px';
+    // Réinitialisez d'autres éléments si nécessaire
+};
 
     function addBlur(event) {
         document.querySelectorAll('.flexbox').forEach(otherFlexbox => {
@@ -957,6 +958,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
 
 document.getElementById("pauseButton").addEventListener("click", function() {
     this.classList.toggle("clicked");
