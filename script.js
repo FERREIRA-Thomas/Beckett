@@ -161,7 +161,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             const video = document.getElementById('video');
             video.play(); // Reprendre la lecture de la vidéo
-            video.currentTime = 0; // Remettre la lecture de la vidéo au début
 
             // Retirer le flou immédiatement
             document.querySelectorAll('.flexbox').forEach(flexbox => {
