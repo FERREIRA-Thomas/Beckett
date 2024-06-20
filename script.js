@@ -97,6 +97,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         };
     });
+        const flexboxIndex = event.currentTarget.dataset.index;
+  const paragraph = document.querySelector(`.paragraph-${flexboxIndex}`);
+  if (paragraph) {
+    paragraph.classList.remove('hidden');
+  }
 }
 
     // Fonction pour retirer du flou
@@ -107,6 +112,11 @@ document.addEventListener('DOMContentLoaded', function() {
              triangle.classList.remove('disabled');
         });
     });
+        const flexboxIndex = event.currentTarget.dataset.index;
+  const paragraph = document.querySelector(`.paragraph-${flexboxIndex}`);
+  if (paragraph) {
+    paragraph.classList.add('hidden');
+  }
 }
       
 
@@ -149,6 +159,9 @@ document.addEventListener('DOMContentLoaded', function() {
         stopButton.addEventListener('click', function() {
             const audios = document.querySelectorAll('audio');
             const overlay = document.getElementById('overlay');
+            const paragraph = document.getElementById('paragraph')
+            paragraphs.forEach(paragraph => {
+                paragraph.classList.add('hidden');
             audios.forEach(audio => {
                 audio.pause(); // Mettre en pause tous les sons
                 audio.currentTime = 0; // Remettre la lecture au début
@@ -158,9 +171,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.overlay').classList.add('hidden');
                 document.getElementById('video').style.marginLeft = '0%';
                 document.querySelector('.controls-container').classList.remove('slide-timeline');
+                
             });
             const video = document.getElementById('video');
             video.play(); // Reprendre la lecture de la vidéo
+            video.currentTime = 0; // Remettre la lecture de la vidéo au début
 
             // Retirer le flou immédiatement
             document.querySelectorAll('.flexbox').forEach(flexbox => {
@@ -178,7 +193,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Réactiver l'événement de survol des flexbox
             enableFlexboxHover();
         });
-    }
+    });
+};
+
 
     // Mettre à jour la progression de la timeline lorsque la lecture audio progresse
     document.querySelectorAll('audio').forEach(audio => {
@@ -967,4 +984,65 @@ document.getElementById("pauseButton").addEventListener("click", function() {
 document.getElementById("playButton").addEventListener("click", function() {
     this.classList.toggle("clicked")
     pauseButton.classList.toggle("clicked")
+});
+
+
+
+/* nom en hover des flexboxes */
+
+const texts = {
+      flexbox1: "Paroles d'Anna Chirescu",
+      flexbox2: "Paroles de Mariko Kitahara",
+      flexbox3: "Paroles de Federica Fratagnoli",
+      flexbox4: "Paroles de Geisha Fontaine",
+      flexbox5: "Paroles de Lulla Chourlin",
+      flexbox6: "Paroles de Marian del Valle",
+      flexbox7: "Paroles d'Anatoli Vlassov",
+      flexbox8: "Paroles de Thais Meirelles Parelli",
+      flexbox9: "Paroles de Sara Aggazio",
+      flexbox10: "Paroles de Marie-Jane Otth",
+      flexbox11: "Paroles de Maëlle Rousselot",
+      flexbox12: "Paroles de Fabienne Berger",
+      flexbox13: "Paroles de David Zambrano",
+      flexbox14: "Paroles de Karine Saporta",
+      flexbox15: "Paroles de Camille Casale",
+      flexbox16: "Paroles de Mathieu Bouvier",
+      // Ajoutez des textes supplémentaires si nécessaire
+    };
+
+    const numFlexbox = 17; // Changez ce nombre selon le nombre de flexboxes
+    const paragraphs = [];
+
+    // Créer et ajouter les paragraphes au DOM
+    for (let i = 0; i < numFlexbox; i++) {
+      const flexboxIndex = `flexbox${i + 1}`;
+      const paragraph = document.createElement('p');
+      paragraph.className = `paragraph-${i + 1} hidden`; // Ajouter la classe hidden par défaut
+      paragraph.textContent = texts[flexboxIndex]; 
+      paragraphs.push(paragraph);
+      document.body.appendChild(paragraph); 
+    }
+
+    // Ajouter des écouteurs d'événements pour les flexboxes
+    const flexboxes = document.querySelectorAll('.flexbox');
+flexboxes.forEach((flexbox, index) => {
+  flexbox.addEventListener('mouseover', () => {
+    console.log(`Mouseover flexbox ${index + 1}`);
+    const paragraph = document.querySelector(`.paragraph-${index + 1}`);
+    console.log(`Found paragraph: ${paragraph}`);
+    if (paragraph) {
+      paragraph.classList.remove('hidden');
+      console.log(`Removed hidden class from paragraph`);
+    }
+  });
+
+  flexbox.addEventListener('mouseout', () => {
+    console.log(`Mouseout flexbox ${index + 1}`);
+    const paragraph = document.querySelector(`.paragraph-${index + 1}`);
+    console.log(`Found paragraph: ${paragraph}`);
+    if (paragraph) {
+      paragraph.classList.add('hidden');
+      console.log(`Added hidden class to paragraph`);
+    }
+  });
 });
