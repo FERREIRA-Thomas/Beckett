@@ -153,172 +153,26 @@ body, html {
   display: block; /* show the paragraph when this class is added */
 }
 
-
-/*Parole de - nom en hover des flexbox */
-
-.paragraph-1{
-    position: relative;
-    top: -90%;
-    left: 22%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-2{
-    position: relative;
-    top: -77%;
-    left: 14%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-3{
-    position: relative;
-    top: -90%;
-    left: 6%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-4{
-    position: relative;
-    top: -63%;
-    left: 26%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-5{
-    position: relative;
-    top: -74%;
-    left: 33%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-6{
-    position: relative;
-    top: -90%;
-    left: 46%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-7{
-    position: relative;
-    top: -56%;
-    left: 42%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-8{
-    position: relative;
-    top: -79%;
-    left: 69%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-9{
-    position: relative;
-    top: -101%;
-    left: 62%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-10{
-    position: relative;
-    top: -90%;
-    left: 74%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-11{
-    position: relative;
-    top: -52%;
-    left: 80%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-12{
-    position: relative;
-    top: -63%;
-    left: 69%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-13{
-    position: relative;
-    top: -77%;
-    left: 80%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-14{
-    position: relative;
-    top: -56%;
-    left: 18%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-15{
-    position: relative;
-    top: -46%;
-    left: 57%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
-.paragraph-16{
-    position: relative;
-    top: -106%;
-    left: 76%;
-    font-family: "Courier New";
-    font-weight: 400;
-    font-size: 13px;
-    color: #4F4F4F;
-}
-
 /* ——————————— ORIENTATION de chaque TRIANGLE ———————————————— */
 
 /* Caroline Granger et Anna Chirescu — Audio 1, 2, 3, 4, 5 */
+
+.paragraph-1{
+    position: absolute;
+    top: 26%;
+    left: 18%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+
+@media (max-width: 1500px) 
+{
+    .paragraph-1 {
+        font-size: 13px;
+    }
+}
 
 .flexbox-1 {
     position: absolute;
@@ -361,6 +215,23 @@ body, html {
     }
 
 /* Mariko Kitahara — Audio 6 */
+.paragraph-2{
+    position: absolute;
+    top: 46%;
+    left: 13%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+
+@media (max-width: 1500px) 
+{
+    .paragraph-2 {
+        font-size: 13px;
+    }
+}
+
 .flexbox-2 {
     position: absolute;
     top: 45%;
@@ -377,35 +248,70 @@ body, html {
 
 /* Federica Fratagnoli — Audio 7, 8, 9 */
 
-.flexbox-3 {
+    .paragraph-3{
     position: absolute;
     top: 34%;
-    left: 100px;
-    transform: translate(-50%, -50%);
-    width: 54px;
-    height: 50px;
-}
-.triangle-7{
-    top: 0px;
-    left:0px;
-    transform: rotate(-7deg);
-    cursor: pointer;
-}
-.triangle-8{
-    top: 3px;
-    left:11px;
-    transform: rotate(29deg);
-    cursor: pointer;
-}
-.triangle-9{
-    top: 25px;
-    left:-25px;
-    transform: rotate(-90deg);
-    cursor: pointer;
-}
+    left: 120px;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+    }
+
+    @media (max-width: 1500px) 
+     {
+        .paragraph-3 {
+            font-size: 13px;
+            left: 110px;
+        }
+    }
+
+    .flexbox-3 {
+        position: absolute;
+        top: 34%;
+        left: 100px;
+        transform: translate(-50%, -50%);
+        width: 54px;
+        height: 50px;
+    }
+    .triangle-7{
+        top: 0px;
+        left:0px;
+        transform: rotate(-7deg);
+        cursor: pointer;
+    }
+    .triangle-8{
+        top: 3px;
+        left:11px;
+        transform: rotate(29deg);
+        cursor: pointer;
+    }
+    .triangle-9{
+        top: 25px;
+        left:-25px;
+        transform: rotate(-90deg);
+        cursor: pointer;
+    }
 
 
 /*////////// Geisha Fontaine — Audio 10, 11, 12, 13 ////////////*/
+
+.paragraph-4{
+    position: absolute;
+    top: 61%;
+    left: 25%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+
+@media (max-width: 1500px) 
+{
+    .paragraph-4 {
+        font-size: 13px;
+    }
+}
 
 .flexbox-4 {
     position: absolute;
@@ -444,6 +350,40 @@ body, html {
 
 
 /* Lulla Chourlin et Sarath Amarasingam — Audio 14, 15, 16, 17 */
+
+.paragraph-5{
+    position: absolute;
+    top: 52%;
+    left: 14%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+
+@media (max-width: 1500px) 
+{
+    .paragraph-5 {
+        left: 12%;
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 1000px)
+{
+    .paragraph-5 {
+        top: 54%;
+    }
+}
+
+@media (max-height: 700px)
+{
+    .paragraph-5 {
+        top: 56%;
+    }
+}
+
+
 .flexbox-5 {
     position: absolute;
     top: 46%;
@@ -480,6 +420,38 @@ body, html {
 
 
 /*//////// Marian del Valle, Antia Díaz Otero, Elisabeth Maesen et Barbara Manzetti — Audio 18,19 ////*/
+.paragraph-6{
+    position: absolute;
+    top: 26%;
+    left: 20%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+
+@media (max-width: 1500px) 
+{
+    .paragraph-6 {
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 1000px)
+{
+    .paragraph-6 {
+        top: 24%;
+    }
+}
+
+@media (max-height: 700px)
+{
+    .paragraph-6 {
+        top: 23%;
+    }
+}
+
+
 .flexbox-6 {
     position: absolute;
     top: 32%;
@@ -504,6 +476,23 @@ body, html {
 
 
 /* Anatoli Vlassov — Audio 20, 21, 22, 23 */
+.paragraph-7{
+    position: absolute;
+    top: 68%;
+    left: 40%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+
+@media (max-width: 1500px) 
+{
+    .paragraph-7 {
+        font-size: 13px;
+    }
+}
+
 .flexbox-7 {
     position: absolute;
     top: 68%;
@@ -540,13 +529,43 @@ body, html {
 
 
 /* Thais Meirelles Parelli — Audio 20, 21, 22, 23 */
+.paragraph-8{
+    position: absolute;
+    top: 38%;
+    right: 20%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+
+@media (max-width: 1500px) 
+{
+    .paragraph-8 {
+        font-size: 13px;
+    }
+}
+@media (max-height: 1000px)
+{
+    .paragraph-8 {
+        top: 37%;
+    }
+}
+
+@media (max-height: 700px)
+{
+    .paragraph-8 {
+        top: 36%;
+    }
+}
+
 .flexbox-8 {
     position: absolute;
     top: 42%;
     right: 30%;
    /* transform: translate(-50%, -50%);*/
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
 }
 
 .triangle-24{
@@ -557,6 +576,38 @@ body, html {
 }
 
 /* Eléa Lauret-Baussay — Audio 25, 26, 27, 28 */
+.paragraph-9{
+    position: absolute;
+    top: 15%;
+    right: 30%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+
+@media (max-width: 1500px) 
+{
+    .paragraph-9 {
+        font-size: 13px;
+    }
+}
+@media (max-height: 1000px)
+{
+    .paragraph-9 {
+        top: 13%;
+    }
+}
+
+@media (max-height: 700px)
+{
+    .paragraph-9 {
+        top: 26%;
+        right: 27%;
+    }
+}
+
+
 .flexbox-9 {
     position: absolute;
     top: 20%;
@@ -593,6 +644,37 @@ body, html {
 
 
 /* Julia Wehren — Audio 29, 30 */
+.paragraph-10{
+    position: absolute;
+    top: 27%;
+    right: 20%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+@media (max-width: 1500px) 
+{
+    .paragraph-10 {
+        font-size: 13px;
+    }
+}
+@media (max-height: 1000px)
+{
+    .paragraph-10 {
+        top: 25%;
+    }
+}
+
+@media (max-height: 700px)
+{
+    .paragraph-10 {
+        top: 24%;
+    }
+}
+
+
+
 .flexbox-10 {
     position: absolute;
     top: 30%;
@@ -617,6 +699,37 @@ body, html {
 
 
 /* Maëlle Rousselot et Éléonore Guérineau — Audio 31, 32 */
+.paragraph-11{
+    position: absolute;
+    top: 73%;
+    right: 20%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+
+@media (max-width: 1500px) 
+{
+    .paragraph-11 {
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 1000px)
+{
+    .paragraph-11 {
+        top: 73%;
+    }
+}
+
+@media (max-height: 700px)
+{
+    .paragraph-11 {
+        top: 75%;
+    }
+}
+
 .flexbox-11 {
     position: absolute;
     top: 70%;
@@ -641,6 +754,45 @@ body, html {
 
 
 /* Fabienne Berger et Julia Wehren — Audio 33, 34, 35, 36 */
+
+.paragraph-12{
+    position: absolute;
+    top: 54%;
+    right: 14%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+@media (max-width: 1500px) 
+{
+    .paragraph-12 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1000px) 
+{
+    .paragraph-12 {
+        right: 8%;
+    }
+}
+
+@media (max-height: 1000px)
+{
+    .paragraph-12 {
+        top:53%;
+    }
+}
+
+@media (max-height: 700px)
+{
+    .paragraph-12 {
+        top: 50%;
+    }
+}
+
+
 .flexbox-12 {
     position: absolute;
     top: 60%;
@@ -677,6 +829,45 @@ body, html {
 
 
 /* Alessandra Randazzo et David Zambrano — Audio 37, 38, 39, 40 */
+
+.paragraph-13{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+@media (max-width: 1500px) 
+{
+    .paragraph-13 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1000px) 
+{
+    .paragraph-13 {
+        right: 8%;
+    }
+}
+
+@media (max-height: 1000px)
+{
+    .paragraph-13 {
+        top:52%;
+    }
+}
+
+@media (max-height: 700px)
+{
+    .paragraph-13 {
+        top: 54%;
+    }
+}
+
+
 .flexbox-13 {
     position: absolute;
     top: 45%;
@@ -712,13 +903,44 @@ body, html {
 }
 
 
-/* TPauline Boivineau et Claire Rousier — Audio 41, 42, 43 */
+/* Pauline Boivineau et Claire Rousier — Audio 41, 42, 43 */
+.paragraph-14{
+    position: absolute;
+    top: 56%;
+    left: 10%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+@media (max-width: 1500px) 
+{
+    .paragraph-14 {
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 1000px)
+{
+    .paragraph-14 {
+        top: 56%;
+    }
+}
+
+@media (max-height: 700px)
+{
+    .paragraph-14 {
+        top: 53%;
+    }
+}
+
+
 .flexbox-14 {
     position: absolute;
     top: 62%;
     left: 15%;
    /* transform: translate(-50%, -50%);*/
-    width: 150px;
+    width: 50px;
     height: 90px;
 }
 
@@ -743,6 +965,22 @@ body, html {
 
 
 /* Camille Casale — Audio 44, 45, 46, 47 */
+.paragraph-15{
+    position: absolute;
+    top: 70%;
+    right: 35%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+@media (max-width: 1500px) 
+{
+    .paragraph-15 {
+        font-size: 13px;
+    }
+}
+
 .flexbox-15 {
     position: absolute;
     top: 78%;
@@ -779,6 +1017,46 @@ body, html {
 
 
 /* Mathieu Bouvier— Audio 48, 49, 50, 51 */
+
+.paragraph-16{
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+
+@media (max-width: 1500px) 
+{
+    .paragraph-16 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1000px) 
+{
+    .paragraph-16 {
+        font-size: 13px;
+        right: 18%;
+    }
+}
+@media (max-height: 1000px)
+{
+    .paragraph-16 {
+        top: 16%;
+    }
+}
+
+@media (max-height: 700px)
+{
+    .paragraph-16 {
+        top: 16%;
+    }
+}
+
+
 .flexbox-16 {
     position: absolute;
     top: 15%;
