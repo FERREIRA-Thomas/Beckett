@@ -991,22 +991,22 @@ document.getElementById("playButton").addEventListener("click", function() {
 /* nom en hover des flexboxes */
 
 const texts = {
-      flexbox1: "Paroles d'Anna Chirescu",
-      flexbox2: "Paroles de Mariko Kitahara",
-      flexbox3: "Paroles de Federica Fratagnoli",
-      flexbox4: "Paroles de Geisha Fontaine",
-      flexbox5: "Paroles de Lulla Chourlin",
-      flexbox6: "Paroles de Marian del Valle",
-      flexbox7: "Paroles d'Anatoli Vlassov",
-      flexbox8: "Paroles de Thais Meirelles Parelli",
-      flexbox9: "Paroles de Sara Aggazio",
-      flexbox10: "Paroles de Marie-Jane Otth",
-      flexbox11: "Paroles de Maëlle Rousselot",
-      flexbox12: "Paroles de Fabienne Berger",
-      flexbox13: "Paroles de David Zambrano",
-      flexbox14: "Paroles de Karine Saporta",
-      flexbox15: "Paroles de Camille Casale",
-      flexbox16: "Paroles de Mathieu Bouvier",
+      flexbox1: "Anna Chirescu",
+      flexbox2: "Mariko Kitahara",
+      flexbox3: "Federica Fratagnoli",
+      flexbox4: "Geisha Fontaine",
+      flexbox5: "Lulla Chourlin",
+      flexbox6: "Marian del Valle",
+      flexbox7: "Anatoli Vlassov",
+      flexbox8: "Thais Meirelles Parelli",
+      flexbox9: "Sara Aggazio",
+      flexbox10: "Marie-Jane Otth",
+      flexbox11: "Maëlle Rousselot",
+      flexbox12: "Fabienne Berger",
+      flexbox13: "David Zambrano",
+      flexbox14: "Karine Saporta",
+      flexbox15: "Camille Casale",
+      flexbox16: "Mathieu Bouvier",
       // Ajoutez des textes supplémentaires si nécessaire
     };
 
