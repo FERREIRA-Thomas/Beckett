@@ -8,6 +8,7 @@ body, html {
     font-weight: 400;
 }
 
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -148,8 +149,172 @@ body, html {
 }
 
 
+.paragraph.show {
+  display: block; /* show the paragraph when this class is added */
+}
 
 
+/*Parole de - nom en hover des flexbox */
+
+.paragraph-1{
+    position: relative;
+    top: -90%;
+    left: 22%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-2{
+    position: relative;
+    top: -77%;
+    left: 14%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-3{
+    position: relative;
+    top: -90%;
+    left: 6%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-4{
+    position: relative;
+    top: -63%;
+    left: 26%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-5{
+    position: relative;
+    top: -74%;
+    left: 33%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-6{
+    position: relative;
+    top: -90%;
+    left: 46%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-7{
+    position: relative;
+    top: -56%;
+    left: 42%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-8{
+    position: relative;
+    top: -79%;
+    left: 69%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-9{
+    position: relative;
+    top: -101%;
+    left: 62%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-10{
+    position: relative;
+    top: -90%;
+    left: 74%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-11{
+    position: relative;
+    top: -52%;
+    left: 80%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-12{
+    position: relative;
+    top: -63%;
+    left: 69%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-13{
+    position: relative;
+    top: -77%;
+    left: 80%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-14{
+    position: relative;
+    top: -56%;
+    left: 18%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-15{
+    position: relative;
+    top: -46%;
+    left: 57%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
+
+.paragraph-16{
+    position: relative;
+    top: -106%;
+    left: 76%;
+    font-family: "Courier New";
+    font-weight: 400;
+    font-size: 13px;
+    color: #4F4F4F;
+}
 
 /* ——————————— ORIENTATION de chaque TRIANGLE ———————————————— */
 
