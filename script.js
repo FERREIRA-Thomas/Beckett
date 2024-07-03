@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         triangle.addEventListener('click', function() {
             document.querySelector('.controls-container').classList.remove('hidden');
             document.querySelector('.timeline').classList.remove('hidden');
+            document.getElementById('video').classList.remove('no-blur');
             const audioIndex = triangle.dataset.index;
             const audioElement = document.querySelector(`#audio${audioIndex}`);
             if (audioElement) {
@@ -168,9 +169,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.controls-container').classList.add('hidden');
                 document.querySelector('.timeline').classList.add('hidden');
                 document.querySelector('.parole-text-container').classList.add('hidden');
-                document.querySelector('.overlay').classList.add('hidden');
+                document.querySelector('.overlay').classList.remove('slide-in');
+                document.querySelector('.overlay').classList.add('slide-out');
                 document.getElementById('video').style.marginLeft = '0%';
+                document.getElementById('video').classList.remove('blur');
+                document.getElementById('video').classList.add('no-blur');
                 document.querySelector('.controls-container').classList.remove('slide-timeline');
+
                 
             });
             const video = document.getElementById('video');
@@ -187,7 +192,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Réactiver tous les triangles
             triangles.forEach(triangle => {
                 triangle.classList.remove('disabled');
-                triangle.style.pointerEvents = ''; // Réactiver les clics sur les triangles
+                triangle.style.pointerEvents = '';
+                 triangle.classList.remove('blur');
+                 triangle.classList.add('no-blur');
+                triangle.classList.remove('disabled');// Réactiver les clics sur les triangles
             });
 
             // Réactiver l'événement de survol des flexbox
@@ -398,28 +406,28 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'Troubles. Dans le sillage de trois performances de Trisha Brown et de Deborah Hay',
             authors: 'Geisha Fontaine', // Ajoutez les noms des auteurs ici
             summaryTitle: 'Résumé',
-            summary: 'Danser ? Parler ? Créer ?</br> Dans les années 1970, Trisha Brown et Deborah Hay proposent trois performances « historiques » appartenant incontestablement à l’histoire de la danse. Dans quelles revendications, approches critiques, ou simples pistes d’expérimentation, ces propositions se sont-elles opérées ? Qu’en est-il aujourd’hui ? Qu’est-ce que les mots sont à la danse ? Est-ce que chorégraphier, c’est saper le langage, le détourner, l’amadouer ? Qu’est-ce que cela me fait, nous fait, de danser, parler, énoncer, taire, se taire ? S’agit-il de performer des discours ? Ou, plus subtilement, de subvertir ce qui est danse et ce qui est prise de parole ? En quoi, en ces années 2020, la chorégraphe, danseuse et chercheuse que je suis est-elle concernée par ces performances surgies il y a un demi-siècle ? Quelles empreintes ? Quelles lancées ?',
+            summary: 'Danser ? Parler ? Créer ? Dans les années 1970, Trisha Brown et Deborah Hay proposent trois performances « historiques » appartenant incontestablement à l’histoire de la danse. Dans quelles revendications, approches critiques, ou simples pistes d’expérimentation, ces propositions se sont-elles opérées ? Qu’en est-il aujourd’hui ? Qu’est-ce que les mots sont à la danse ? Est-ce que chorégraphier, c’est saper le langage, le détourner, l’amadouer ? Qu’est-ce que cela me fait, nous fait, de danser, parler, énoncer, taire, se taire ? S’agit-il de performer des discours ? Ou, plus subtilement, de subvertir ce qui est danse et ce qui est prise de parole ? En quoi, en ces années 2020, la chorégraphe, danseuse et chercheuse que je suis est-elle concernée par ces performances surgies il y a un demi-siècle ? Quelles empreintes ? Quelles lancées ?',
             link: 'https://journals.openedition.org/danse/6768' // Ajoutez le lien du texte intégral ici
         },
         {
             title: 'Troubles. Dans le sillage de trois performances de Trisha Brown et de Deborah Hay',
             authors: 'Geisha Fontaine', // Ajoutez les noms des auteurs ici
             summaryTitle: 'Résumé',
-            summary: 'Danser ? Parler ? Créer ?</br> Dans les années 1970, Trisha Brown et Deborah Hay proposent trois performances « historiques » appartenant incontestablement à l’histoire de la danse. Dans quelles revendications, approches critiques, ou simples pistes d’expérimentation, ces propositions se sont-elles opérées ? Qu’en est-il aujourd’hui ? Qu’est-ce que les mots sont à la danse ? Est-ce que chorégraphier, c’est saper le langage, le détourner, l’amadouer ? Qu’est-ce que cela me fait, nous fait, de danser, parler, énoncer, taire, se taire ? S’agit-il de performer des discours ? Ou, plus subtilement, de subvertir ce qui est danse et ce qui est prise de parole ? En quoi, en ces années 2020, la chorégraphe, danseuse et chercheuse que je suis est-elle concernée par ces performances surgies il y a un demi-siècle ? Quelles empreintes ? Quelles lancées ?',
+            summary: 'Danser ? Parler ? Créer ?Dans les années 1970, Trisha Brown et Deborah Hay proposent trois performances « historiques » appartenant incontestablement à l’histoire de la danse. Dans quelles revendications, approches critiques, ou simples pistes d’expérimentation, ces propositions se sont-elles opérées ? Qu’en est-il aujourd’hui ? Qu’est-ce que les mots sont à la danse ? Est-ce que chorégraphier, c’est saper le langage, le détourner, l’amadouer ? Qu’est-ce que cela me fait, nous fait, de danser, parler, énoncer, taire, se taire ? S’agit-il de performer des discours ? Ou, plus subtilement, de subvertir ce qui est danse et ce qui est prise de parole ? En quoi, en ces années 2020, la chorégraphe, danseuse et chercheuse que je suis est-elle concernée par ces performances surgies il y a un demi-siècle ? Quelles empreintes ? Quelles lancées ?',
             link: 'https://journals.openedition.org/danse/6768' // Ajoutez le lien du texte intégral ici
         },
         {
             title: 'Troubles. Dans le sillage de trois performances de Trisha Brown et de Deborah Hay',
             authors: 'Geisha Fontaine', // Ajoutez les noms des auteurs ici
             summaryTitle: 'Résumé',
-            summary: 'Danser ? Parler ? Créer ?</br> Dans les années 1970, Trisha Brown et Deborah Hay proposent trois performances « historiques » appartenant incontestablement à l’histoire de la danse. Dans quelles revendications, approches critiques, ou simples pistes d’expérimentation, ces propositions se sont-elles opérées ? Qu’en est-il aujourd’hui ? Qu’est-ce que les mots sont à la danse ? Est-ce que chorégraphier, c’est saper le langage, le détourner, l’amadouer ? Qu’est-ce que cela me fait, nous fait, de danser, parler, énoncer, taire, se taire ? S’agit-il de performer des discours ? Ou, plus subtilement, de subvertir ce qui est danse et ce qui est prise de parole ? En quoi, en ces années 2020, la chorégraphe, danseuse et chercheuse que je suis est-elle concernée par ces performances surgies il y a un demi-siècle ? Quelles empreintes ? Quelles lancées ?',
+            summary: 'Danser ? Parler ? Créer ? Dans les années 1970, Trisha Brown et Deborah Hay proposent trois performances « historiques » appartenant incontestablement à l’histoire de la danse. Dans quelles revendications, approches critiques, ou simples pistes d’expérimentation, ces propositions se sont-elles opérées ? Qu’en est-il aujourd’hui ? Qu’est-ce que les mots sont à la danse ? Est-ce que chorégraphier, c’est saper le langage, le détourner, l’amadouer ? Qu’est-ce que cela me fait, nous fait, de danser, parler, énoncer, taire, se taire ? S’agit-il de performer des discours ? Ou, plus subtilement, de subvertir ce qui est danse et ce qui est prise de parole ? En quoi, en ces années 2020, la chorégraphe, danseuse et chercheuse que je suis est-elle concernée par ces performances surgies il y a un demi-siècle ? Quelles empreintes ? Quelles lancées ?',
             link: 'https://journals.openedition.org/danse/6768' // Ajoutez le lien du texte intégral ici
         },
         {
             title: 'Troubles. Dans le sillage de trois performances de Trisha Brown et de Deborah Hay',
             authors: 'Geisha Fontaine', // Ajoutez les noms des auteurs ici
             summaryTitle: 'Résumé',
-            summary: 'Danser ? Parler ? Créer ?</br> Dans les années 1970, Trisha Brown et Deborah Hay proposent trois performances « historiques » appartenant incontestablement à l’histoire de la danse. Dans quelles revendications, approches critiques, ou simples pistes d’expérimentation, ces propositions se sont-elles opérées ? Qu’en est-il aujourd’hui ? Qu’est-ce que les mots sont à la danse ? Est-ce que chorégraphier, c’est saper le langage, le détourner, l’amadouer ? Qu’est-ce que cela me fait, nous fait, de danser, parler, énoncer, taire, se taire ? S’agit-il de performer des discours ? Ou, plus subtilement, de subvertir ce qui est danse et ce qui est prise de parole ? En quoi, en ces années 2020, la chorégraphe, danseuse et chercheuse que je suis est-elle concernée par ces performances surgies il y a un demi-siècle ? Quelles empreintes ? Quelles lancées ?',
+            summary: 'Danser ? Parler ? Créer ? Dans les années 1970, Trisha Brown et Deborah Hay proposent trois performances « historiques » appartenant incontestablement à l’histoire de la danse. Dans quelles revendications, approches critiques, ou simples pistes d’expérimentation, ces propositions se sont-elles opérées ? Qu’en est-il aujourd’hui ? Qu’est-ce que les mots sont à la danse ? Est-ce que chorégraphier, c’est saper le langage, le détourner, l’amadouer ? Qu’est-ce que cela me fait, nous fait, de danser, parler, énoncer, taire, se taire ? S’agit-il de performer des discours ? Ou, plus subtilement, de subvertir ce qui est danse et ce qui est prise de parole ? En quoi, en ces années 2020, la chorégraphe, danseuse et chercheuse que je suis est-elle concernée par ces performances surgies il y a un demi-siècle ? Quelles empreintes ? Quelles lancées ?',
             link: 'https://journals.openedition.org/danse/6768' // Ajoutez le lien du texte intégral ici
         },
 
@@ -995,8 +1003,8 @@ const texts = {
       flexbox2: "Mariko Kitahara",
       flexbox3: "Federica Fratagnoli",
       flexbox4: "Geisha Fontaine",
-      flexbox5: "Lulla Chourlin et Sarath Amarasingam",
-      flexbox6: "Marian del Valle, Antia Díaz Otero, Elisabeth Maesen et Barbara Manzetti",
+      flexbox5: "Lulla Chourlin et<br>Sarath Amarasingam",
+      flexbox6: "Marian del Valle,<br>Antia Díaz Otero,<br>Elisabeth Maesen et<br>Barbara Manzetti",
       flexbox7: "Anatoli Vlassov",
       flexbox8: "Thais Meirelles Parelli",
       flexbox9: "Eléa Lauret-Baussay",
@@ -1018,7 +1026,7 @@ const texts = {
       const flexboxIndex = `flexbox${i + 1}`;
       const paragraph = document.createElement('p');
       paragraph.className = `paragraph-${i + 1} hidden`; // Ajouter la classe hidden par défaut
-      paragraph.textContent = texts[flexboxIndex]; 
+      paragraph.innerHTML = texts[flexboxIndex]; 
       paragraphs.push(paragraph);
       document.body.appendChild(paragraph); 
     }
@@ -1044,5 +1052,18 @@ flexboxes.forEach((flexbox, index) => {
       paragraph.classList.add('hidden');
       console.log(`Added hidden class to paragraph`);
     }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const welcomeOverlay = document.getElementById('welcomeOverlay');
+  const closeWelcomePopupButton = document.getElementById('closeWelcomePopup');
+
+  // Afficher le pop-up au chargement de la page
+  welcomeOverlay.style.display = 'flex';
+
+  // Fermer le pop-up lorsqu'on clique sur le bouton
+  closeWelcomePopupButton.addEventListener('click', () => {
+    welcomeOverlay.style.display = 'none';
   });
 });
