@@ -1004,7 +1004,7 @@ const texts = {
       flexbox3: "Federica Fratagnoli",
       flexbox4: "Geisha Fontaine",
       flexbox5: "Lulla Chourlin et<br>Sarath Amarasingam",
-      flexbox6: "Marian del Valle,<br>Antia Díaz Otero,<br>Elisabeth Maesen et<br>Barbara Manzetti",
+      flexbox6: "Marian del Valle, Antia Díaz Otero,<br>Elisabeth Maesen et Barbara Manzetti",
       flexbox7: "Anatoli Vlassov",
       flexbox8: "Thais Meirelles Parelli",
       flexbox9: "Eléa Lauret-Baussay",

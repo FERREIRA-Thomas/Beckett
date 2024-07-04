@@ -66,7 +66,7 @@ body, html {
 @media (max-width: 1500px) 
 {
     .main-title {
-        font-size: 30px; 
+        font-size: 35px; 
     }
 }
 
@@ -83,7 +83,7 @@ body, html {
 @media (max-width: 1500px) {
     .sub-title {
         top: 0px;
-        font-size: 10px; 
+        font-size: 12px; 
     }
 }
 
@@ -1128,7 +1128,7 @@ body, html {
   @media (max-width: 1500px) 
 {
     .parole-text-container {
-        font-size: 10px;
+        font-size: 12px;
         width: 300px;
     }
 }*/
@@ -1427,25 +1427,25 @@ body, html {
         height: 30px;
     }
     .panel-title{
-        font-size: 18px; 
+        font-size: 20px; 
     }
 
     .panel-authors{
-        font-size: 13px; 
+        font-size: 14px; 
         margin-top: 0;
         margin-bottom: 0;
     }
     .panel-summarytitle{
-        font-size: 13px; 
+        font-size: 14px; 
         margin-top: 7%;
         margin-bottom: 0;
     }
     .panel-summary {
-        font-size: 10px; 
+        font-size: 12px; 
     }
     #panelLink {
         padding: 6px 12px;
-        font-size: 10px;
+        font-size: 12px;
         margin-left: 150px;
     }
 
@@ -1471,7 +1471,7 @@ body, html {
 {
     .credit {
         top: 0px;
-        font-size: 10px; 
+        font-size: 12px; 
         font-weight: bold;
     }
 }
@@ -1575,8 +1575,8 @@ Titre Crédits à Droite
 
 .welcome-popup {
   background: #fff;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 40px;
+  border-radius: 10px;
   text-align: center;
   max-width: 500px;
   width: 80%;
@@ -1598,7 +1598,7 @@ Titre Crédits à Droite
     left: 0px;
     font-family: "Courier New";
     font-weight: 400;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 
