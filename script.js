@@ -1058,12 +1058,42 @@ flexboxes.forEach((flexbox, index) => {
 document.addEventListener('DOMContentLoaded', function() {
   const welcomeOverlay = document.getElementById('welcomeOverlay');
   const closeWelcomePopupButton = document.getElementById('closeWelcomePopup');
+  const triangles = document.querySelectorAll('.triangle');
+    const mainTitle = document.querySelector('.main-title');
+    const subTitle = document.querySelector('.sub-title');
+    const credit = document.querySelector('.credit');
 
   // Afficher le pop-up au chargement de la page
   welcomeOverlay.style.display = 'flex';
+  mainTitle.classList.remove('no-blur');
+        mainTitle.classList.add('blur');
+        subTitle.classList.remove('no-blur');
+        subTitle.classList.add('blur');
+        credit.classList.remove('no-blur');
+        credit.classList.add('blur');
+        video.classList.remove('no-blur');
+        video.classList.add('blur');
+     triangles.forEach(triangle => {
+            triangle.classList.remove('no-blur');
+            triangle.classList.add('blur');
+            triangle.classList.add('disabled');   
 
   // Fermer le pop-up lorsqu'on clique sur le bouton
   closeWelcomePopupButton.addEventListener('click', () => {
     welcomeOverlay.style.display = 'none';
+    mainTitle.classList.remove('blur');
+        mainTitle.classList.add('no-blur');
+        subTitle.classList.remove('blur');
+        subTitle.classList.add('no-blur');
+        credit.classList.remove('blur');
+        credit.classList.add('no-blur');
+        video.classList.remove('blur');
+        video.classList.add('no-blur');
+        triangles.forEach(triangle => {
+            triangle.classList.remove('blur');
+            triangle.classList.add('no-blur');
+            triangle.classList.remove('disabled')
   });
+});
+ });
 });
