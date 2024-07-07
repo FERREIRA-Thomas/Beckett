@@ -51,6 +51,25 @@ body, html {
     color: inherit; /* Utilise la couleur par défaut du texte */
     cursor: pointer; /* Change le curseur en main au survol */
 }
+a:link {
+    text-decoration: none;
+    color: inherit; /* Utilise la couleur par défaut du texte */
+    cursor: pointer; /* Change le curseur en main au survol */
+
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
+
 
 /*Titre principal*/
 .main-title {
@@ -160,7 +179,7 @@ body, html {
 .paragraph-1{
     position: absolute;
     top: 26%;
-    left: 18%;
+    left: 25%;
     font-family: "Courier New";
     font-weight: 400;
     font-size: 14px;
@@ -354,7 +373,7 @@ body, html {
 .paragraph-5{
     position: absolute;
     top: 52%;
-    left: 14%;
+    left: 22%;
     font-family: "Courier New";
     font-weight: 400;
     font-size: 14px;
@@ -364,7 +383,7 @@ body, html {
 @media (max-width: 1500px) 
 {
     .paragraph-5 {
-        left: 12%;
+        left: 20%;
         font-size: 13px;
     }
 }
@@ -423,7 +442,7 @@ body, html {
 .paragraph-6{
     position: absolute;
     top: 26%;
-    left: 20%;
+    left: 30%;
     font-family: "Courier New";
     font-weight: 400;
     font-size: 14px;
@@ -464,7 +483,7 @@ body, html {
 .triangle-18{
     top: 0px;
     left:0px;
-    transform: rotate(26deg);
+    transform: rotate(15deg);
     cursor: pointer;
 }
 .triangle-19{
@@ -531,8 +550,8 @@ body, html {
 /* Thais Meirelles Parelli — Audio 20, 21, 22, 23 */
 .paragraph-8{
     position: absolute;
-    top: 38%;
-    right: 20%;
+    top: 33%;
+    right: 10%;
     font-family: "Courier New";
     font-weight: 400;
     font-size: 14px;
@@ -548,14 +567,14 @@ body, html {
 @media (max-height: 1000px)
 {
     .paragraph-8 {
-        top: 37%;
+        top: 32%;
     }
 }
 
 @media (max-height: 700px)
 {
     .paragraph-8 {
-        top: 36%;
+        top: 28%;
     }
 }
 
@@ -579,7 +598,7 @@ body, html {
 .paragraph-9{
     position: absolute;
     top: 15%;
-    right: 30%;
+    right: 22%;
     font-family: "Courier New";
     font-weight: 400;
     font-size: 14px;
@@ -590,20 +609,20 @@ body, html {
 {
     .paragraph-9 {
         font-size: 13px;
+        right: 20%;
     }
 }
 @media (max-height: 1000px)
 {
     .paragraph-9 {
-        top: 13%;
+        top: 15%;
     }
 }
 
 @media (max-height: 700px)
 {
     .paragraph-9 {
-        top: 26%;
-        right: 27%;
+        top: 15%;
     }
 }
 
@@ -646,8 +665,8 @@ body, html {
 /* Julia Wehren — Audio 29, 30 */
 .paragraph-10{
     position: absolute;
-    top: 27%;
-    right: 20%;
+    top: 25%;
+    right: 26%;
     font-family: "Courier New";
     font-weight: 400;
     font-size: 14px;
@@ -662,14 +681,14 @@ body, html {
 @media (max-height: 1000px)
 {
     .paragraph-10 {
-        top: 25%;
+        top: 23%;
     }
 }
 
 @media (max-height: 700px)
 {
     .paragraph-10 {
-        top: 24%;
+        top: 22%;
     }
 }
 
@@ -758,7 +777,7 @@ body, html {
 .paragraph-12{
     position: absolute;
     top: 54%;
-    right: 14%;
+    right: 15%;
     font-family: "Courier New";
     font-weight: 400;
     font-size: 14px;
@@ -768,13 +787,14 @@ body, html {
 {
     .paragraph-12 {
         font-size: 13px;
+        right: 10%;
     }
 }
 
 @media (max-width: 1000px) 
 {
     .paragraph-12 {
-        right: 8%;
+        right: 5%;
     }
 }
 
@@ -906,7 +926,7 @@ body, html {
 /* Pauline Boivineau et Claire Rousier — Audio 41, 42, 43 */
 .paragraph-14{
     position: absolute;
-    top: 56%;
+    top: 53%;
     left: 10%;
     font-family: "Courier New";
     font-weight: 400;
@@ -923,14 +943,14 @@ body, html {
 @media (max-height: 1000px)
 {
     .paragraph-14 {
-        top: 56%;
+        top: 51%;
     }
 }
 
 @media (max-height: 700px)
 {
     .paragraph-14 {
-        top: 53%;
+        top: 48%;
     }
 }
 
@@ -1124,6 +1144,11 @@ body, html {
     font-size: 13px;
     color: black;
   }
+
+  a{
+    color: black;
+    }
+ 
 
   @media (max-width: 1500px) 
 {
@@ -1511,7 +1536,7 @@ Titre Crédits à Droite
 }
 .close-button-credits {
    position: absolute;
-   bottom: 650px;
+   bottom: 680px;
    margin-left: 27px; /* Espacement entre la timeline et le bouton stop */
    margin-right: 10px;
    color: white;
@@ -1522,7 +1547,7 @@ Titre Crédits à Droite
 
 .panel-title-credits{
     position: absolute;
-    bottom: 530px;
+    bottom: 570px;
     left: 12%;
     right: 5%;
    font-family: "Courrier New" ;
@@ -1549,10 +1574,10 @@ Titre Crédits à Droite
     }
     .panel-title-credits{
         font-size: 18px;
-        bottom: 400px;
+        bottom: 440px;
     }
     .close-button-credits {
-        bottom: 470px;
+        bottom: 520px;
         width: 30px;
         height: 30px;
     }
