@@ -988,7 +988,7 @@ a:link {
 .paragraph-15{
     position: absolute;
     top: 70%;
-    right: 35%;
+    right: 20%;
     font-family: "Courier New";
     font-weight: 400;
     font-size: 14px;
@@ -998,6 +998,7 @@ a:link {
 {
     .paragraph-15 {
         font-size: 13px;
+        right: 15%;
     }
 }
 
