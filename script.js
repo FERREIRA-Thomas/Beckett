@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalTriangles = 51;
     const numFlexbox = 17;
     const stopButton = document.getElementById('stopButton');
+    let activeTriangle = null; // Variable pour garder une référence au triangle actif
 
     // Créer les triangles et les ajouter à la page
     const triangles = [];
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.controls-container').classList.remove('hidden');
             document.querySelector('.timeline').classList.remove('hidden');
             document.getElementById('video').classList.remove('no-blur');
+            document.getElementById('credit').classList.add('disabled');
             const audioIndex = triangle.dataset.index;
             const audioElement = document.querySelector(`#audio${audioIndex}`);
             if (audioElement) {
@@ -58,6 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
 
+                // Ajouter la gestion de l'état actif
+                if (activeTriangle) {
+                    activeTriangle.classList.remove('active');
+                }
+                triangle.classList.add('active');
+                activeTriangle = triangle;
+
                 // Désactiver l'événement de survol des flexbox
                 disableFlexboxHover();
             }
@@ -70,11 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
             flexbox.removeEventListener('mouseover', addBlur);
             flexbox.removeEventListener('mouseout', removeBlur);
             flexbox.querySelectorAll('.triangle').forEach(triangle => {
-            triangle.classList.add('disabled');
+                triangle.classList.add('disabled');
+            });
         });
-    });
-}
-        
+    }
 
     // Fonction pour réactiver l'événement de survol des flexbox
     function enableFlexboxHover() {
@@ -82,11 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
             flexbox.addEventListener('mouseover', addBlur);
             flexbox.addEventListener('mouseout', removeBlur);
             flexbox.querySelectorAll('.triangle').forEach(triangle => {
-            triangle.classList.remove('disabled');
+                triangle.classList.remove('disabled');
+            });
         });
-    });
-}
- 
+    }
 
     // Fonction pour ajouter du flou
     function addBlur(event) {
@@ -94,32 +101,31 @@ document.addEventListener('DOMContentLoaded', function() {
             if (otherFlexbox !== event.currentTarget) {
                 otherFlexbox.style.filter = 'blur(5px)';
                 otherFlexbox.querySelectorAll('.triangle').forEach(triangle => {
-                triangle.classList.add('disabled');
-            });
-        };
-    });
+                    triangle.classList.add('disabled');
+                });
+            }
+        });
         const flexboxIndex = event.currentTarget.dataset.index;
-  const paragraph = document.querySelector(`.paragraph-${flexboxIndex}`);
-  if (paragraph) {
-    paragraph.classList.remove('hidden');
-  }
-}
+        const paragraph = document.querySelector(`.paragraph-${flexboxIndex}`);
+        if (paragraph) {
+            paragraph.classList.remove('hidden');
+        }
+    }
 
     // Fonction pour retirer du flou
     function removeBlur() {
         document.querySelectorAll('.flexbox').forEach(flexbox => {
             flexbox.style.filter = 'none';
             flexbox.querySelectorAll('.triangle').forEach(triangle => {
-             triangle.classList.remove('disabled');
+                triangle.classList.remove('disabled');
+            });
         });
-    });
-        const flexboxIndex = event.currentTarget.dataset.index;
-  const paragraph = document.querySelector(`.paragraph-${flexboxIndex}`);
-  if (paragraph) {
-    paragraph.classList.add('hidden');
-  }
-}
-      
+                const flexboxIndex = event.currentTarget.dataset.index;
+        const paragraph = document.querySelector(`.paragraph-${flexboxIndex}`);
+        if (paragraph) {
+            paragraph.classList.add('hidden');
+        }
+    }
 
     // Fonction pour créer une flexbox avec un nombre spécifique de triangles
     function createFlexbox(numTriangles, flexboxIndex) {
@@ -156,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Vérifier si stopButton est défini avant d'ajouter l'écouteur d'événement
-    if (stopButton) {
+     if (stopButton) {
         stopButton.addEventListener('click', function() {
             const audios = document.querySelectorAll('audio');
             const overlay = document.getElementById('overlay');
@@ -193,17 +199,21 @@ document.addEventListener('DOMContentLoaded', function() {
             triangles.forEach(triangle => {
                 triangle.classList.remove('disabled');
                 triangle.style.pointerEvents = '';
-                 triangle.classList.remove('blur');
-                 triangle.classList.add('no-blur');
-                triangle.classList.remove('disabled');// Réactiver les clics sur les triangles
+                triangle.classList.remove('blur');
+                triangle.classList.add('no-blur');
+                triangle.classList.remove('disabled'); // Réactiver les clics sur les triangles
             });
 
             // Réactiver l'événement de survol des flexbox
             enableFlexboxHover();
+
+            // Ajouter la gestion de l'état "stopped"
+            if (activeTriangle) {
+                activeTriangle.classList.add('visited');
+            }
         });
     });
-};
-
+    };
 
     // Mettre à jour la progression de la timeline lorsque la lecture audio progresse
     document.querySelectorAll('audio').forEach(audio => {
@@ -258,8 +268,6 @@ document.addEventListener('DOMContentLoaded', function() {
     enableFlexboxHover();
 });
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const triangles = document.querySelectorAll('.triangle');
     const flexboxes = document.querySelectorAll('.flexbox');
@@ -295,6 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Réinitialiser les triangles et le flou lorsque le bouton stop est cliqué
     document.getElementById('stopButton').addEventListener('click', reset);
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const triangles = document.querySelectorAll('.triangle');
@@ -938,8 +947,10 @@ document.addEventListener('DOMContentLoaded', function() {
             triangle.classList.remove('blur');
             triangle.classList.add('no-blur');
             triangle.classList.remove('disabled');
+            triangle.classList.remove('active');
         });
         resetElementMargins();
+        removeBlur();
     });
 
        // Panneaux crédits : déplacement des éléments sur la droite à l'ouverture du panneau
@@ -962,6 +973,14 @@ function resetElementMargins() {
     // Réinitialisez d'autres éléments si nécessaire
 };
 
+function enableFlexboxHover() {
+        document.querySelectorAll('.flexbox').forEach(flexbox => {
+            flexbox.addEventListener('mouseover', addBlur);
+            flexbox.addEventListener('mouseout', removeBlur);
+        });
+    };
+
+
     function addBlur(event) {
         document.querySelectorAll('.flexbox').forEach(otherFlexbox => {
             if (otherFlexbox !== event.currentTarget) {
@@ -982,6 +1001,8 @@ function resetElementMargins() {
         });
     }
 });
+
+
 
 
 document.getElementById("pauseButton").addEventListener("click", function() {
