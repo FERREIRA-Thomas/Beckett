@@ -330,7 +330,6 @@ document.addEventListener('DOMContentLoaded', function() {
      panelTitleCredits.style.fontFamily = "'Courier New', Courier, monospace";
 
 
-
     // Tableau contenant les titres, les auteurs, les résumés et les liens pour chaque audio
     const panelContents = [
 
