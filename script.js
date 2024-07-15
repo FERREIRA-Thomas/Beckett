@@ -180,6 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('video').style.marginLeft = '0%';
                 document.getElementById('video').classList.remove('blur');
                 document.getElementById('video').classList.add('no-blur');
+                document.getElementById('credit').classList.remove('disabled');
                 document.querySelector('.controls-container').classList.remove('slide-timeline');
 
                 
