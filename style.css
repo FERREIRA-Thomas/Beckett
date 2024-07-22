@@ -1644,21 +1644,3 @@ button#closeWelcomePopup:hover {
   background: #606060;
 }
 
-div.acdLogo{
-    position: absolute;
-    bottom: 50px;
-    right: 67px;
-    background-position: center top;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 75px;
-    cursor: pointer;
-}
-#acdLogoAction{
-    background-image: url('logo_acd_nb.png');
-    background-size: 100%;
-}
-#acdLogoAction:hover{
-    background-image: url('logo_acd_hover.png');
-    background-size: 100%;
-}
