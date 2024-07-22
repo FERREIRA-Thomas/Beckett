@@ -1540,7 +1540,7 @@ Titre Crédits à Droite
 }
 .close-button-credits {
    position: absolute;
-   bottom: 680px;
+   bottom: 720px;
    margin-left: 27px; /* Espacement entre la timeline et le bouton stop */
    margin-right: 10px;
    color: white;
@@ -1551,7 +1551,7 @@ Titre Crédits à Droite
 
 .panel-title-credits{
     position: absolute;
-    bottom: 570px;
+    bottom: 620px;
     left: 12%;
     right: 5%;
    font-family: "Courrier New" ;
@@ -1578,10 +1578,10 @@ Titre Crédits à Droite
     }
     .panel-title-credits{
         font-size: 18px;
-        bottom: 440px;
+        bottom: 480px;
     }
     .close-button-credits {
-        bottom: 520px;
+        bottom: 560px;
         width: 30px;
         height: 30px;
     }
