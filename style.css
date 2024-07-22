@@ -1645,10 +1645,9 @@ button#closeWelcomePopup:hover {
 }
 
 div.acdLogo{
-    position: relative;
-    top: 0;
-    left: 35%;
-    padding-bottom: 20px;
+    position: absolute;
+    bottom: 50px;
+    right: 67px;
     background-position: center top;
     background-repeat: no-repeat;
     width: 150px;
